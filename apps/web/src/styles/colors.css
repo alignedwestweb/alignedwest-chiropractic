@@ -1,27 +1,131 @@
 :root {
-  --color-primary: var(--colors-tangerine-400, #f89938);
-  --color-primary-light: var(--colors-tangerine-100, #ffdbc2);
-  --color-primary-dark: var(--colors-tangerine-600, #f66e05);
-  --color-secondary: var(--colors-teal-400, #6dc497);
-  --color-secondary-light: var(--colors-teal-100, #e6fff9);
-  --color-secondary-dark: var(--colors-teal-600, #339999);
-  --color-accent: var(--colors-fuchsia-600);
-  --color-accent-light: var(--colors-fuchsia-300);
-  --color-accent-dark: var(--colors-fuchsia-1000);
-  --color-success: var(--colors-olive-500);
-  --color-success-light: var(--colors-olive-100);
-  --color-success-dark: var(--colors-olive-700);
+  --color-primary: var(--colors-sunset-500, #F4C468);
+  --color-primary-light: var(--colors-sunset-200, #FAE4BD);
+  --color-primary-dark: var(--colors-sunset-700, #8F6208);
+  --color-secondary: var(--colors-stone-400, #B8B2A5);
+  --color-secondary-light: var(--colors-stone-200, #F0EDE6);
+  --color-secondary-dark: var(--colors-ocean-1000, #0E1429);
+  --color-accent: var(--colors-amber-500);
+  --color-accent-light: var(--colors-amber-200);
+  --color-accent-dark: var(--colors-amber-700);
+  --color-success: var(--colors-sage-500);
+  --color-success-light: var(--colors-sage-100);
+  --color-success-dark: var(--colors-sage-700);
   --color-warning: var(--colors-amber-300);
   --color-warning-light: var(--colors-amber-200);
   --color-warning-dark: var(--colors-amber-600);
-  --color-error: var(--colors-cherry-700);
-  --color-error-light: var(--colors-cherry-300);
-  --color-error-dark: var(--colors-cherry-900);
-  --color-info: var(--colors-sky-600);
-  --color-info-light: var(--colors-sky-300);
-  --color-info-dark: var(--colors-sky-1000);
-}
+  --color-error: var(--colors-rose-700);
+  --color-error-light: var(--colors-rose-300);
+  --color-error-dark: var(--colors-rose-900);
+  --color-info: var(--colors-mint-600);
+  --color-info-light: var(--colors-mint-300);
+  --color-info-dark: var(--colors-mint-1000);
 
+  /* Greyscale */
+  --color-white-: #FFF;
+  --color-stone-50: rgb(255 253 248 / 100%);
+  --color-stone-100: rgb(250 248 241 / 100%);
+  --color-stone-200: rgb(240 237 230 / 100%);
+  --color-stone-300: rgb(224 219 212 / 100%);
+  --color-stone-400: rgb(184 178 165 / 100%);
+  --color-stone-500: rgb(159 154 145 / 100%);
+  --color-stone-600: rgb(143 138 129 / 100%);
+  --color-stone-700: rgb(121 116 107 / 100%);
+  --color-stone-800: rgb(96 90 83 / 100%);
+  --color-stone-900: rgb(66 66 64 / 100%);
+  --color-stone-1000: rgb(46 46 43 / 100%);
+
+  /* Red */
+  --color-rose-50: rgb(255 241 242 / 100%);
+  --color-rose-100: rgb(255 228 230 / 100%);
+  --color-rose-200: rgb(247 195 195 / 100%);
+  --color-rose-300: rgb(255 101 101 / 100%);
+  --color-rose-400: rgb(228 68 68 / 100%);
+  --color-rose-500: rgb(183 57 57 / 100%);
+  --color-rose-600: rgb(171 42 42 / 100%);
+  --color-rose-700: rgb(147 22 22 / 100%);
+  --color-rose-800: rgb(138 10 10 / 100%);
+  --color-rose-900: rgb(129 17 35 / 100%);
+  --color-rose-1000: rgb(103 18 19 / 100%);
+
+  /* Orange */
+  --color-amber-50: rgb(255 251 235 / 100%);
+  --color-amber-100: rgb(240 220 200 / 100%);
+  --color-amber-200: rgb(229 192 156 / 100%);
+  --color-amber-300: rgb(219 165 118 / 100%);
+  --color-amber-400: rgb(210 141 82 / 100%);
+  --color-amber-500: rgb(201 120 48 / 100%);
+  --color-amber-600: rgb(187 110 41 / 100%);
+  --color-amber-700: rgb(160 91 30 / 100%);
+  --color-amber-800: rgb(133 74 21 / 100%);
+  --color-amber-900: rgb(104 58 17 / 100%);
+  --color-amber-1000: rgb(85 45 10 / 100%);
+
+  /* Yellow */
+  --color-sunset-50: rgb(255 254 243 / 100%);
+  --color-sunset-100: rgb(252 240 219 / 100%);
+  --color-sunset-200: rgb(250 228 189 / 100%);
+  --color-sunset-300: rgb(248 217 160 / 100%);
+  --color-sunset-400: rgb(246 207 132 / 100%);
+  --color-sunset-500: rgb(244 196 104 / 100%);
+  --color-sunset-600: rgb(187 128 18 / 100%);
+  --color-sunset-700: rgb(143 98 8 / 100%);
+  --color-sunset-800: rgb(98 66 6 / 100%);
+  --color-sunset-900: rgb(76 51 5 / 100%);
+  --color-sunset-1000: rgb(47 30 3 / 100%);
+
+  /* Green */
+  --color-sage-50: rgb(250 255 251 / 100%);
+  --color-sage-100: rgb(240 253 244 / 100%);
+  --color-sage-200: rgb(188 255 201 / 100%);
+  --color-sage-300: rgb(157 249 148 / 100%);
+  --color-sage-400: rgb(117 246 115 / 100%);
+  --color-sage-500: rgb(30 213 103 / 100%);
+  --color-sage-600: rgb(21 178 79 / 100%);
+  --color-sage-700: rgb(27 145 76 / 100%);
+  --color-sage-800: rgb(23 107 62 / 100%);
+  --color-sage-900: rgb(16 78 45 / 100%);
+  --color-sage-1000: rgb(15 61 45 / 100%);
+
+  /* Mint */
+  --color-mint-50: rgb(245 255 253 / 100%);
+  --color-mint-100: rgb(217 235 238 / 100%);
+  --color-mint-200: rgb(182 219 225 / 100%);
+  --color-mint-300: rgb(147 205 213 / 100%);
+  --color-mint-400: rgb(109 192 203 / 100%);
+  --color-mint-500: rgb(60 181 193 / 100%);
+  --color-mint-600: rgb(51 153 153 / 100%);
+  --color-mint-700: rgb(0 116 120 / 100%);
+  --color-mint-800: rgb(0 95 90 / 100%);
+  --color-mint-900: rgb(11 79 74 / 100%);
+  --color-mint-1000: rgb(2 47 46 / 100%);
+
+  /* Blue */
+  --color-ocean-50: rgb(241 251 255 / 100%);
+  --color-ocean-100: rgb(227 246 255 / 100%);
+  --color-ocean-200: rgb(183 203 255 / 100%);
+  --color-ocean-300: rgb(110 142 201 / 100%);
+  --color-ocean-400: rgb(107 121 169 / 100%);
+  --color-ocean-500: rgb(86 96 162 / 100%);
+  --color-ocean-600: rgb(74 84 143 / 100%);
+  --color-ocean-700: rgb(49 63 120 / 100%);
+  --color-ocean-800: rgb(41 49 80 / 100%);
+  --color-ocean-900: rgb(28 36 62 / 100%);
+  --color-ocean-1000: rgb(14 20 41 / 100%);
+
+  /* Purple */
+  --color-lavender-50: rgb(252 244 255 / 100%);
+  --color-lavender-100: rgb(251 238 255 / 100%);
+  --color-lavender-200: rgb(242 205 255 / 100%);
+  --color-lavender-300: rgb(232 164 255 / 100%);
+  --color-lavender-400: rgb(223 128 255 / 100%);
+  --color-lavender-500: rgb(212 83 255 / 100%);
+  --color-lavender-600: rgb(193 40 244 / 100%);
+  --color-lavender-700: rgb(155 12 203 / 100%);
+  --color-lavender-800: rgb(116 4 154 / 100%);
+  --color-lavender-900: rgb(85 2 113 / 100%);
+  --color-lavender-1000: rgb(63 11 79 / 100%);
+}
 @theme {
   --color-*: initial;
 
@@ -97,7 +201,7 @@
   --teal-300: #7be7bc;
   --teal-400: #6dc497;
   --teal-500: #4ba58e;
-  --teal-600: #339999;
+  --teal-600: #399;
   --teal-700: #007478;
   --teal-800: #005f5a;
   --teal-900: #0b4f4a;
@@ -128,10 +232,9 @@
   --fuchsia-800: #74049a;
   --fuchsia-900: #550271;
   --fuchsia-1000: #3f0b4f;
-
-  --color-white: #FFFFFF;
-  --color-black: #000000;
-  --color-contrast: #FFFFFF;
+  --color-white: #FFF;
+  --color-black: #000;
+  --color-contrast: #FFF;
 }
 
 .dark {
@@ -207,10 +310,9 @@
   --color-olive-100:#205735;
 
   /* Greyscale */
-  --color-white: #000000;
-  --color-black: #FFFFFF;
-  --color-contrast: #000000;
-  
+  --color-white: #000;
+  --color-black: #FFF;
+  --color-contrast: #000;
   --color-grey-1000:#f6f5f7;
   --color-grey-900:#f4f2f2;
   --color-grey-800:#efefef;

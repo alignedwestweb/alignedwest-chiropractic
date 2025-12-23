@@ -1,35 +1,35 @@
-import { useState, useEffect } from 'react';
-import { Link, useLocation } from "react-router-dom";
-import { cn } from "@/lib/utils";
-import { navitems } from "./constants";
-import type { NavigationProps } from "./types";
-import logowhite from "@/assets/logo-contrast.webp";
-import logoprimary from "@/assets/logo-primary.webp";
-import { Icon } from "@/components/ui/Icon/Icon";
+import { useState, useEffect } from 'react'
+import { Link, useLocation } from "react-router-dom"
+import { cn } from "@/lib/utils"
+import { navitems } from "./constants"
+import type { NavigationProps } from "./types"
+import logowhite from "/logo-contrast.svg"
+import logoprimary from "/logo-primary.svg"
+import { Icon } from "@/components/ui/Icon/Icon"
 
 export function Navigation({ onNavigate, heroHeight = 600 }: NavigationProps) {
-  const location = useLocation();
-  const isHomePage = location.pathname === "/";
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation()
+  const isHomePage = location.pathname === "/"
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen((prev) => !prev);
-  };
+    setIsMobileMenuOpen((prev) => !prev)
+  }
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > heroHeight);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [heroHeight]);
+    const handleScroll = () => setIsScrolled(window.scrollY > heroHeight)
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [heroHeight])
 
   useEffect(() => {
     if (isMobileMenuOpen) {
-      document.body.classList.add('overflow-hidden');
+      document.body.classList.add('overflow-hidden')
     } else {
-      document.body.classList.remove('overflow-hidden');
+      document.body.classList.remove('overflow-hidden')
     }
-  }, [isMobileMenuOpen]);
+  }, [isMobileMenuOpen])
 
   return (
     <>
@@ -44,7 +44,7 @@ export function Navigation({ onNavigate, heroHeight = 600 }: NavigationProps) {
         <div className="flex flex-col items-center relative w-full">
           <div className="flex flex-row items-center justify-between max-w-6xl w-full px-8 py-6">
             {/* Logo */}
-            <Link to="/" onClick={() => { onNavigate('home'); setIsMobileMenuOpen(false); }} className="h-full w-auto p-0 bg-transparent hover:scale-105 transition-transform flex items-center">
+            <Link to="/" onClick={() => { onNavigate('home'); setIsMobileMenuOpen(false) }} className="h-full w-auto p-0 bg-transparent hover:scale-105 transition-transform flex items-center">
               <img
                 src={isHomePage && !isScrolled ? logowhite : logoprimary}
                 alt="Aligned West Chiropractic"
@@ -55,7 +55,7 @@ export function Navigation({ onNavigate, heroHeight = 600 }: NavigationProps) {
               {/* Desktop Navigation Menu */}
               <ul className="hidden lg:flex gap-6 items-center">
                 {navitems.map((item) => {
-                  const isActive = location.pathname === `/${item.page}`;
+                  const isActive = location.pathname === `/${item.page}`
                   return (
                     <li key={item.page} className="group">
                       <Link
@@ -84,7 +84,7 @@ export function Navigation({ onNavigate, heroHeight = 600 }: NavigationProps) {
                         />
                       </Link>
                     </li>
-                  );
+                  )
                 })}
               </ul>
 
@@ -139,7 +139,7 @@ export function Navigation({ onNavigate, heroHeight = 600 }: NavigationProps) {
                 <li key={item.page}>
                   <Link
                     to={`/${item.page}`}
-                    onClick={() => { onNavigate(item.page); setIsMobileMenuOpen(false); }}
+                    onClick={() => { onNavigate(item.page); setIsMobileMenuOpen(false) }}
                     className="block text-white font-semibold text-lg py-2 hover:text-secondary transition"
                   >
                     {item.text}
@@ -151,5 +151,5 @@ export function Navigation({ onNavigate, heroHeight = 600 }: NavigationProps) {
         </div>
       )}
     </>
-  );
+  )
 }

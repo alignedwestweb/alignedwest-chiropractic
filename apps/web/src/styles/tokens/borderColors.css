@@ -1,0 +1,73 @@
+@import '@/styles/base/colors.css';
+
+:root {
+  --border-primary: var(--color-sunset-500, #F4C468);
+  --border-primary-light: var(--color-sunset-200);
+  --border-primary-dark: var(--color-sunset-700);
+  --border-secondary: var(--color-mint-500, #3CB5C1);
+  --border-secondary-light: var(--color-mint-200, #B6DBE1);
+  --border-secondary-dark: var(--color-ocean-1000, #0E1429);
+  --border-accent: var(--color-amber-500);
+  --border-accent-light: var(--color-amber-200);
+  --border-accent-dark: var(--color-amber-700);
+  --border-success: var(--color-sage-500);
+  --border-success-light: var(--color-sage-100);
+  --border-success-dark: var(--color-sage-700);
+  --border-warning: var(--color-amber-300);
+  --border-warning-light: var(--color-amber-200);
+  --border-warning-dark: var(--color-amber-600);
+  --border-error: var(--color-rose-700);
+  --border-error-light: var(--color-rose-300);
+  --border-error-dark: var(--color-rose-900);
+  --border-info: var(--color-mint-600);
+  --border-info-light: var(--color-mint-300);
+  --border-info-dark: var(--color-mint-1000);
+  --border-default: var(--color-stone-400);
+  --border-content: var(--color-stone-300);
+  --border-body: var(--color-stone-100);
+  --border-subtle: var(--color-stone-200);
+  --border-disabled: var(--color-stone-200);
+  --border-primary\/90: rgb(244 196 104 / 90%);
+  --border-primary\/50: rgb(244 196 104 / 50%);
+  --border-primary\/30: rgb(244 196 104 / 30%);
+  --border-primary\/10: rgb(244 196 104 / 10%);
+  --border-secondary\/90: rgb(60 181 193 / 90%);
+  --border-secondary\/50: rgb(60 181 193 / 50%);
+  --border-secondary\/30: rgb(60 181 193 / 30%);
+  --border-secondary\/10: rgb(60 181 193 / 10%);
+}
+
+@layer utilities {
+  .border-default { border-color: var(--color-stone-400); }
+  .border-subtle { border-color: var(--color-stone-300); }
+  .border-disabled { border-color: var(--color-stone-200); }
+
+  .border-primary { border-color: var(--color-primary); }
+  .border-primary-light { border-color: var(--color-primary-light); }
+  .border-primary-dark { border-color: var(--color-primary-dark); }
+
+  .border-secondary { border-color: var(--color-secondary); }
+  .border-secondary-light { border-color: var(--color-secondary-light); }
+  .border-secondary-dark { border-color: var(--color-secondary-dark); }
+
+  .border-accent { border-color: var(--color-accent); }
+  .border-accent-light { border-color: var(--color-accent-light); }
+  .border-accent-dark { border-color: var(--color-accent-dark); }
+
+  .border-success { border-color: var(--color-success); }
+  .border-success-light { border-color: var(--color-success-light); }
+  .border-success-dark { border-color: var(--color-success-dark); }
+
+  .border-warning { border-color: var(--color-warning); }
+  .border-warning-light { border-color: var(--color-warning-light); }
+  .border-warning-dark { border-color: var(--color-warning-dark); }
+
+  .border-error { border-color: var(--color-error); }
+  .border-error-light { border-color: var(--color-error-light); }
+  .border-error-dark { border-color: var(--color-error-dark); }
+  .border-error\/50 { border-color: var(--color-error, rgb(201 37 48 / 50%)); }
+
+  .border-info { border-color: var(--color-info); }
+  .border-info-light { border-color: var(--color-info-light); }
+  .border-info-dark { border-color: var(--color-info-dark); }
+}

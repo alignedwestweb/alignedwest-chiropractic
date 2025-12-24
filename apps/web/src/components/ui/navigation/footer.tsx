@@ -108,21 +108,21 @@ export function Footer({ onNavigate }: { onNavigate: (page: PageType) => void })
                   <MapPin className="w-5 h-5 text-amber-600 mt-1 shrink-0" />
                   <div>
                     <p className="text-muted-foreground leading-relaxed">
-                      123 West Harmony Lane
+                      574 S State Street
                       <br />
-                      Wellness Center
+                      Suite 232
                       <br />
-                      Your City, ST 12345
+                      Orem, UT 84058​
                     </p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-amber-600" />
-                  <p className="text-muted-foreground">(555) 123-4567</p>
+                  <p className="text-muted-foreground">(801) 623-0912</p>
                 </div>
                 <div className="flex items-center gap-3">
                   <Mail className="w-5 h-5 text-amber-600" />
-                  <p className="text-muted-foreground">hello@alignedwest.com</p>
+                  <p className="text-muted-foreground">weston@alignedwest.com</p>
                 </div>
               </div>
             </div>

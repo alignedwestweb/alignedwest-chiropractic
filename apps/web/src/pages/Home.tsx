@@ -5,11 +5,9 @@ import headshot from "@/assets/headshot.webp"
 import HomeHero from "@/lib/sections/HomeHero"
 import Services from "@/lib/sections/Services"
 import { Details } from "@/lib/blocks/Details"
-import { Testimonials } from "@/lib/sections/Testimonials"
-import { Contact } from "@/lib/blocks/Contact"
+import { CTA } from '@/lib/sections/CTASection'
 import BookingDialog from "@/lib/blocks/BookingDialog"
 import { Toaster } from "@/components/ui/sonner"
-import FAQ from "@/lib/sections/FAQ"
 import Info from "@/lib/sections/Info"
 
 export interface HomeProps {
@@ -42,10 +40,8 @@ export default function Home({ onNavigate }: HomeProps) {
           <About image={headshot} />
           <Services />
           <Details />
-          <Testimonials />
-          <Contact />
-          <FAQ />
           <Info />
+          <CTA onNavigate={onNavigate} />
 
           {/* ✅ Booking dialog opens when user clicks "Book Now" */}
           <BookingDialog

@@ -71,8 +71,11 @@ export default function Info() {
                     <div>
                       <h5 className="mb-1">Location</h5>
                       <p className="text-gray-600">
-                        123 Wellness Street<br />
-                        Health City, HC 12345
+                        574 S State Street
+                      <br />
+                      Suite 232
+                      <br />
+                      Orem, UT 84058​
                       </p>
                     </div>
                   </div>

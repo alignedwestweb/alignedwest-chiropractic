@@ -1,5 +1,5 @@
-import React from "react";
-import type { AvailableIcons } from '@/components/ui/Icon';
+import React from "react"
+import type { AvailableIcons } from '@/components/ui/Icon'
 
 export type PageType =
   | 'home'
@@ -10,6 +10,7 @@ export type PageType =
   | 'blog'
   | 'clinic'
   | 'book'
+  | 'booking'
   | 'signin'
   | 'privacy'
   | 'terms'

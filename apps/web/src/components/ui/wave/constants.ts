@@ -31,6 +31,6 @@ export const COLORS = {
 
 // Gradient animation constants
 export const GRADIENT_ANIMATION_NAME = "gradient-shift"
-export const GRADIENT_DURATION = "30s" // slower than before
+export const GRADIENT_DURATION = "20s" // slower than before
 export const GRADIENT_TIMING = "ease"
-export const GRADIENT_OPACITY = 0.8
+export const GRADIENT_OPACITY = 1

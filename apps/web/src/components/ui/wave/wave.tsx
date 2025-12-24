@@ -1,9 +1,7 @@
 import { useEffect, useRef } from "react"
-import bgSand from "@/assets/bgSand.jpg"
 import {
   heroBGWrapper,
   canvasContainer,
-  sandImage,
   getGradientInlineStyle,
   gradientKeyframes,
 } from "./styles"
@@ -212,12 +210,15 @@ export default function HeroBG() {
   // ----------------------------------------
   return (
     <section className={heroBGWrapper}>
-      <div className="flex absolute top-0 left-0 w-full h-full inset-0 z-1">
-        <div style={getGradientInlineStyle()} className="gradient"/>
-        <div className={canvasContainer}>
-          <img src={bgSand} alt="sand background" className={sandImage} />
-          <canvas ref={canvasRef} className="w-full h-full" />
+      <div className="absolute inset-0 w-full h-full">
+        <div className={`${canvasContainer} absolute inset-0`}>
+          <div
+            style={getGradientInlineStyle()}
+            className="gradient absolute inset-0 z-1 pointer-events-none"
+          />
+          <canvas ref={canvasRef} className="absolute z-0 inset-0 w-full h-full" />
         </div>
+
       </div>
     </section>
   )

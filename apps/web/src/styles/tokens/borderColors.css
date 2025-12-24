@@ -7,7 +7,7 @@
   --border-secondary: var(--color-mint-500, #3CB5C1);
   --border-secondary-light: var(--color-mint-200, #B6DBE1);
   --border-secondary-dark: var(--color-ocean-1000, #0E1429);
-  --border-accent: var(--color-amber-500);
+  --border-accent: var(--color-amber-500, #C97830);
   --border-accent-light: var(--color-amber-200);
   --border-accent-dark: var(--color-amber-700);
   --border-success: var(--color-sage-500);

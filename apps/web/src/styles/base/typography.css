@@ -1,27 +1,282 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap');
+
+@font-face {
+  font-family: Geller;
+  src: url("/assets/fonts/geller-headline-black.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Geller;
+  src: url("/assets/fonts/geller-headline-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Geller;
+  src: url("/assets/fonts/geller-headline-semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Geller;
+  src: url("/assets/fonts/geller-headline-medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Geller;
+  src: url("/assets/fonts/geller-headline.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Geller;
+  src: url("/assets/fonts/geller-headline-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Avenir;
+  src: url("/assets/fonts/avenir-black.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Avenir;
+  src: url("/assets/fonts/avenir-heavy.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Avenir;
+  src: url("/assets/fonts/avenir-regular.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Avenir;
+  src: url("/assets/fonts/avenir-book.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Avenir;
+  src: url("/assets/fonts/avenir-light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
 
 @layer utilities {
-  .font-montserrat { font-family: var(--font-montserrat); }
-  .font-helvetica-neue { font-family: var(--font-helvetica-neue); }
-  .text-xs { font-size: var(--text-xs); }
-  .text-sm { font-size: var(--text-sm); }
-  .text-base { font-size: var(--text-base); }
-  .text-lg { font-size: var(--text-lg); }
-  .text-xl { font-size: var(--text-xl); }
-  .text-2xl { font-size: var(--text-2xl); }
-  .text-3xl { font-size: var(--text-3xl); }
-  .text-4xl { font-size: var(--text-4xl); }
-  .text-5xl { font-size: var(--text-5xl); }
-  .text-6xl { font-size: var(--text-6xl); }
-  .text-7xl { font-size: var(--text-7xl); }
-  .text-8xl { font-size: var(--text-8xl); }
+  .font-primary {
+    font-family: var(--font-geller);
+  }
+
+  .font-secondary {
+    font-family: var(--font-avenir);
+  }
+
+  .font-alt {
+    font-family: var(--font-roboto);
+  }
+
+  .font-geller {
+    font-family: var(--font-geller);
+  }
+
+  .font-avenir {
+    font-family: var(--font-avenir);
+  }
+
+  .font-roboto {
+    font-family: var(--font-roboto);
+  }
+
+  .text-xs {
+    font-size: var(--text-xs);
+  }
+
+  .text-sm {
+    font-size: var(--text-sm);
+  }
+
+  .text-base {
+    font-size: var(--text-base);
+  }
+
+  .text-lg {
+    font-size: var(--text-lg);
+  }
+
+  .text-xl {
+    font-size: var(--text-xl);
+  }
+
+  .text-2xl {
+    font-size: var(--text-2xl);
+  }
+
+  .text-3xl {
+    font-size: var(--text-3xl);
+  }
+
+  .text-4xl {
+    font-size: var(--text-4xl);
+  }
+
+  .text-5xl {
+    font-size: var(--text-5xl);
+  }
+
+  .text-6xl {
+    font-size: var(--text-6xl);
+  }
+
+  .text-7xl {
+    font-size: var(--text-7xl);
+  }
+
+  .text-8xl {
+    font-size: var(--text-8xl);
+  }
+
+  .text-9xl {
+    font-size: var(--text-9xl);
+  }
+
+  .text-10xl {
+    font-size: var(--text-10xl);
+  }
+}
+
+@layer components {
+  .typography {
+    p,
+    .body-md {
+      font-family: var(--font-secondary);
+      font-size: var(--text-base);
+      line-height: var(--leading-tight);
+      color: var(--text-default);
+      margin: 0;
+    }
+
+    .title-2xl {
+      font-family: var(--font-primary);
+      font-weight: var(--font-black, 800);
+      font-size: var(--text-8xl);
+      line-height: var(--leading-cozy);
+      letter-spacing: var(--tracking-normal);
+      color: var(--text-primary);
+      margin: 0;
+    }
+
+    h1,
+    .h1,
+    .title-xl {
+      font-family: var(--font-primary);
+      font-weight: var(--font-semibold);
+      font-size: var(--text-8xl);
+      line-height: var(--leading-tight);
+      letter-spacing: var(--tracking-normal);
+      color: var(--text-primary);
+      margin: 0;
+    }
+
+    h2,
+    .title-lg {
+      font-family: var(--font-primary);
+      font-weight: var(--font-semibold);
+      font-size: var(--text-6xl);
+      line-height: var(--leading-tight);
+      letter-spacing: var(--tracking-normal);
+      color: var(--text-primary);
+      margin: 0;
+    }
+
+    h3,
+    .title-md {
+      font-family: var(--font-primary);
+      font-weight: var(--font-medium);
+      font-size: var(--text-5xl);
+      line-height: var(--leading-tight);
+      letter-spacing: var(--tracking-normal);
+      color: var(--text-primary);
+      margin: 0;
+    }
+
+    h4,
+    .title-sm {
+      font-family: var(--font-primary);
+      font-weight: var(--font-medium);
+      font-size: var(--text-4xl);
+      letter-spacing: var(--tracking-normal);
+      color: var(--text-default);
+      margin: 0;
+    }
+
+    strong {
+      font-weight: var(--font-semibold);
+    }
+
+    .body-xl {
+      font-family: var(--font-secondary);
+      font-size: var(--text-xl);
+      line-height: var(--leading-tight);
+      color: var(--text-default);
+      margin: 0;
+    }
+
+    .body-lg {
+      font-family: var(--font-secondary);
+      font-size: var(--text-lg);
+      line-height: var(--leading-tight);
+      color: var(--text-default);
+      margin: 0;
+    }
+
+    .body-sm {
+      font-family: var(--font-secondary);
+      font-size: var(--text-sm);
+      line-height: var(--leading-tight);
+      color: var(--text-default);
+      margin: 0;
+    }
+
+    .body-xs {
+      font-family: var(--font-secondary);
+      font-size: var(--text-xs);
+      line-height: var(--leading-tight);
+      color: var(--text-default);
+      margin: 0;
+    }
+  }
 }
 
 :root {
-  --font-montserrat: "Montserrat", serif;
-  --font-helvetica-neue: "Helvetica Neue", sans-serif;
-  --text-2xs: 0.625rem;
+  --font-geller: "Geller", serif;
+  --font-avenir: "Avenir", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;
   --text-base: 1rem;
@@ -34,6 +289,8 @@
   --text-6xl: 3rem;
   --text-7xl: 3.5rem;
   --text-8xl: 4rem;
+  --text-9xl: 4.5rem;
+  --text-10xl: 5rem;
   --leading-cozy: 1.08;
   --leading-tighter: 1.15;
   --leading-tight: 1.25;
@@ -47,104 +304,4 @@
   --tracking-widest: 0.1em;
   --tracking-ultra: 0.2em;
   --tracking-mega: 0.3em;
-}
-
-@layer components {
-  .typography {
-    p, .body {
-      font-family: var(--font-helvetica-neue);
-      font-size: var(--text-base);
-      line-height: var(--leading-tight);
-      color: var(--text-default);
-      margin: 0;
-    }
-
-    h1, .title-hero {
-      font-family: var(--font-montserrat);
-      font-weight: var(--font-semibold);
-      line-height: var(--leading-tight);
-      letter-spacing: var(--tracking-normal);
-      font-size: var(--text-4xl);
-      color: var(--text-primary);
-      margin: 0;
-    }
-
-     h2, .title-page {
-      font-family: var(--font-montserrat);
-      font-weight: var(--font-semibold);
-      line-height: var(--leading-tight);
-      letter-spacing: var(--tracking-normal);
-              font-size: var(--text-3xl);
-      color: var(--text-primary);
-      margin: 0;
-    }
-
-    h3, .title-subtitle {
-      font-family: var(--font-montserrat);
-      font-weight: var(--font-semibold);
-      line-height: var(--leading-tight);
-      letter-spacing: var(--tracking-normal);
-      font-size: var(--text-2xl);
-      color: var(--text-primary);
-      margin: 0;
-    }
-
-    h4, .title-subheader {
-      font-family: var(--font-montserrat);
-      font-weight: var(--font-semibold);
-      font-size: var(--text-xl);
-      letter-spacing: var(--tracking-normal);
-      color: var(--text-default);
-      margin: 0;
-    }
-
-    .body-lg {
-      font-family: var(--font-helvetica-neue);
-      line-height: var(--leading-tight);
-      font-size: var(--text-lg);
-      color: var(--text-default);
-      margin: 0;
-    }
-
-    .body-sm {
-      font-family: var(--font-helvetica-neue);
-      font-size: var(--text-sm);
-      line-height: var(--leading-tight);
-      color: var(--text-default);
-      margin: 0;
-    }
-
-    .body-xs {
-      font-family: var(--font-helvetica-neue);
-      font-size: var(--text-2xs);
-      line-height: var(--leading-tight);
-      color: var(--text-default);
-      margin: 0;
-    }
-
-    @media (min-width: 768px) {
-      h1, .title-hero { font-size: var(--text-5xl); }
-      h2, .title-page { font-size: var(--text-4xl); }
-      h3, .title-page { font-size: var(--text-3xl); }
-      h4, .title-page { font-size: var(--text-2xl); }
-      .body-lg { font-size: var(--text-xl); }
-      .body-sm { font-size: var(--text-sm); }
-      .body-xs { font-size: var(--text-xs); }
-    }
-
-    @media (min-width: 1080px) {
-      h1, .title-hero { font-size: var(--text-6xl); }
-      h2, .title-page { font-size: var(--text-5xl); }
-       h3, .title-page { font-size: var(--text-4xl); }
-      h4, .title-page { font-size: var(--text-3xl); }
-      .body-lg { font-size: var(--text-2xl); }
-    }
-    
-
-    strong {
-      font-weight: var(--font-semibold);
-    }
-
-    
-  }
 }

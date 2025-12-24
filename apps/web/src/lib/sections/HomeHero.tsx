@@ -19,7 +19,7 @@ export default function HomeHero({ onNavigate, onBookNow }: HomeHeroProps) {
           variant="fullscreen"
             size="lg"
             bg={{ images: { sm: bgImage, md: bgImage, lg: bgImage }, alt: "Chiropractic care background", fixed: true }}
-            overlays={["gradient"]}
+            overlays={["none"]}
             className="relative size-full w-full h-full"
             onNavigate={onNavigate}
           >

@@ -14,11 +14,11 @@ export const heroBGWrapper = `
 `
 
 export const canvasContainer = `
-  flex absolute top-0 left-0 w-full h-full inset-0 z-1 pointer-events-none
+  flex absolute top-0 left-0 w-full h-full inset-0 z-0 pointer-events-none
 `
 
 export const gradientOverlay = `
-  absolute inset-0 z-3 opacity-80 pointer-events-none
+  absolute inset-0 z-1 opacity-100 pointer-events-none
 `
 
 export const sandImage = `
@@ -37,16 +37,14 @@ export const gradientStyle: React.CSSProperties = {
   height: "100%",
   background: `linear-gradient(
     45deg,
-    #f86a54 0%,
-    #f89938 25%,
-    #dfcc84 50%,
-    #6dc497 75%,
-    #016699 100%
+    #0E1429 0%,
+    #293150 50%,
+    #4A548F 100%,
   )`,
   backgroundSize: "400% 400%",
-  animation: "gradient-shift 15s ease infinite",
-  opacity: 0.8,
-  zIndex: 2,
+  animation: "gradient-shift 5s ease infinite",
+  opacity: 1,
+  zIndex: 1,
 }
 
 /* ────────────────────────────────────────────────
@@ -55,7 +53,7 @@ export const gradientStyle: React.CSSProperties = {
 
 export const gradientStyleClass = `
   absolute inset-0 z-30 pointer-events-none
-  bg-[linear-gradient(45deg,#f86a54_0%,#f89938_25%,#dfcc84_50%,#6dc497_75%,#016699_100%)]
+  bg-[linear-gradient(45deg,#0E1429_0%,#293150_50%,#4A548F_100%)]
   bg-[length:400%_400%]
   animate-gradientShift
 `
@@ -79,7 +77,7 @@ export const gradientKeyframes = `
 export function getGradientInlineStyle(): Record<string, string | number> {
   return {
     background:
-      "linear-gradient(45deg, #f86a54 0%, #f89938 25%, #dfcc84 50%, #6dc497 75%, #016699 100%)",
+      "linear-gradient(45deg, #0E1429 0%, #293150 50%, #4A548F 100%)",
     backgroundSize: "400% 400%",
     animationName: GRADIENT_ANIMATION_NAME,
     animationDuration: GRADIENT_DURATION,

@@ -25,19 +25,19 @@ export default function About({ image }: { image: string }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
           <div className="flex items-center justify-center space-x-3 mb-6">
-            <Heart className="w-6 h-6 text-amber-600" />
-            <span className="text-sm text-muted-foreground tracking-wider uppercase">
+            <Heart className="w-6 h-6 text-accent" />
+            <span className="font-secondary text-2xl text-default tracking-wide">
               Your Wellness Guide
             </span>
           </div>
 
-          <h2 className="text-4xl lg:text-5xl text-primary mb-6 tracking-tight">
+          <h2 className="font-primary text-4xl lg:text-5xl text-primary mb-6 tracking-wide">
             Meet Dr. Weston
-            <span className="block text-amber-700 italic">Sorenson</span>
+            <span className="block text-accent italic">Sorenson</span>
           </h2>
 
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            A devoted healer whose gentle hands and compassionate heart guide you toward your most radiant self.
+          <p className="font-secondary text-lg text-default max-w-xl mx-auto leading-relaxed">
+            Guiding you toward balance and renewal through compassionate, integrative chiropractic care.
           </p>
         </div>
 
@@ -50,7 +50,7 @@ export default function About({ image }: { image: string }) {
                 className="w-full h-full object-cover"
               />
             </div>
-            
+
             {/* Decorative elements */}
             <div className="absolute -top-4 -left-4 w-20 h-20 bg-amber-200/20 rounded-full blur-xl"></div>
             <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-rose-200/20 rounded-full blur-xl"></div>
@@ -59,25 +59,23 @@ export default function About({ image }: { image: string }) {
           <div className="space-y-8">
             <div className="space-y-6">
               <div className="flex items-center space-x-3">
-                <Leaf className="w-6 h-6 text-amber-600" />
-                <h3 className="text-2xl text-primary tracking-wide">
+                <Leaf className="w-6 h-6 text-accent" />
+                <h3 className="font-secondary text-2xl text-primary tracking-wide">
                   A Sacred Partnership in Healing
                 </h3>
               </div>
-
-              <p className="text-lg leading-relaxed text-muted-foreground">
-                For over fifteen years, Dr. Weston Sorenson has walked alongside thousands on their journey to wellness—blending the ancient wisdom of healing touch with modern understanding of the body’s innate ability to restore itself.
+              <p className="font-secondary text-lg leading-relaxed text-default">
+                For more than fifteen years, Dr. Weston Sorenson has supported thousands on their path to wellness—integrating ancient healing practices with modern chiropractic techniques to honor the body’s innate capacity to restore itself.
               </p>
-
-              <p className="text-base leading-relaxed text-muted-foreground">
-                His approach transcends the boundaries of traditional chiropractic care, honoring the whole person—body, mind, and spirit. Each session becomes a sacred exchange between healer and soul, creating space for your body to remember its natural state of balance and harmony.
+              <p className="font-secondary text-lg leading-relaxed text-default">
+                His approach goes beyond traditional care, addressing the whole person—body, mind, and spirit. Each session becomes a collaborative, intentional space where your system can realign, release, and return to its natural state of balance.
               </p>
             </div>
 
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
-                <GraduationCap className="w-5 h-5 text-amber-600" />
-                <h4 className="text-lg text-primary">Credentials & Continuing Journey</h4>
+                <GraduationCap className="w-6 h-6 text-accent" />
+                <h4 className="font-secondary text-2xl text-primary">Credentials & Continuing Journey</h4>
               </div>
               <div className="flex flex-wrap gap-3">
                 {credentials.map((credential, index) => (
@@ -89,13 +87,10 @@ export default function About({ image }: { image: string }) {
             </div>
 
             <div className="relative p-8 rounded-2xl bg-linear-to-br from-amber-50 to-orange-50 border border-amber-100">
-              <Sparkles className="w-6 h-6 text-amber-600 mb-4" />
-              <h4 className="text-lg text-primary mb-3">A Personal Message</h4>
-              <blockquote className="text-lg italic leading-relaxed text-muted-foreground">
-                "True healing happens when we honor the body's wisdom and create space for its natural intelligence to shine.
-                My role is simply to be a gentle guide, helping you rediscover the vibrant health that is your birthright."
+              <blockquote className="text-lg italic leading-relaxed text-default">
+                "True healing happens when we listen to the body’s innate wisdom and find balance in our physical, emotional, and spiritual well-being. My role is to be a guide—helping remove the barriers that hinder your body’s natural ability to heal so you can align with your highest potential."
               </blockquote>
-              <p className="text-sm text-amber-700 mt-4 font-medium">— Dr. Luna Martinez</p>
+              <p className="text-sm text-amber-700 mt-4 font-medium">— Dr. Weston Sorenson</p>
             </div>
           </div>
         </div>

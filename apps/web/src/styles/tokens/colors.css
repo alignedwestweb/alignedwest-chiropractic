@@ -7,7 +7,7 @@
   --color-secondary: var(--colors-mint-500, #3CB5C1);
   --color-secondary-light: var(--colors-mint-200, #B6DBE1);
   --color-secondary-dark: var(--colors-ocean-1000, #0E1429);
-  --color-accent: var(--colors-amber-500);
+  --color-accent: var(--colors-amber-500, #C97830);
   --color-accent-light: var(--colors-amber-200);
   --color-accent-dark: var(--colors-amber-700);
   --color-success: var(--colors-sage-500);

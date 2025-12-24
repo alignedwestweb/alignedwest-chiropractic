@@ -1,5 +1,17 @@
 @import '@/styles/base/colors.css';
 
+@theme {
+  --text-primary: var(--color-primary);
+  --text-primary-light: var(--color-primary-light);
+  --text-primary-dark: var(--color-primary-dark);
+  --text-secondary: var(--color-secondary);
+  --text-secondary-light: var(--color-secondary-light);
+  --text-secondary-dark: var(--color-secondary-dark);
+  --text-accent: var(--color-amber-500);
+  --text-accent-light: var(--color-accent-light);
+  --text-accent-dark: var(--color-accent-dark);
+}
+
 :root {
   --text-primary: var(--color-sunset-500, #F4C468);
   --text-primary-light: var(--color-sunset-200);
@@ -7,7 +19,7 @@
   --text-secondary: var(--color-mint-500, #3CB5C1);
   --text-secondary-light: var(--color-mint-200, #B6DBE1);
   --text-secondary-dark: var(--color-ocean-1000, #0E1429);
-  --text-accent: var(--color-amber-500);
+  --text-accent: var(--color-amber-500, #C97830);
   --text-accent-light: var(--color-amber-200);
   --text-accent-dark: var(--color-amber-700);
   --text-success: var(--color-sage-500);

@@ -1,7 +1,7 @@
-import type { OverlayVariant, Breakpoint, HeroVariant, HeroHeight, HeroAlignment, HeroLayout } from "@/lib/constants";
-import type { VariantProps } from "class-variance-authority";
-import { heroVariants } from "@/lib/styles";
-import type { PageType } from "@/components/ui/navigation/types";
+import type { OverlayVariant, Breakpoint, HeroVariant, HeroHeight, HeroAlignment, HeroLayout } from "@/lib/constants"
+import type { VariantProps } from "class-variance-authority"
+import { heroVariants } from "@/lib/styles"
+import type { PageType } from "@/components/ui/navigation/types"
 
 // Background
 export interface BGProps {
@@ -32,7 +32,7 @@ export interface GalleryProps {
 }
 
 // Content
-export interface HeroContent {
+export interface HeroContent extends VariantProps<typeof heroVariants> {
   title: string;
   subheader?: string;
   badge?: string;

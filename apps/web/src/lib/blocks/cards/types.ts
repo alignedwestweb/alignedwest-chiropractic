@@ -6,15 +6,16 @@ export interface ServiceCardProps {
   icon: LucideIconType
   title: string
   description: string
-  duration: string
-  features: string[]
-  color: string
-  price: string
+  durations: number[]
+  prices: Record<number, number>
+  modality: 'massage' | 'energy' | string
+  popularity: number
   image?: string
-  popular?: boolean
-  index?: number
   onBook?: (id: string) => void
   onLearnMore?: (id: string) => void
+  // features: string[]
+  // color: string
+  index?: number
 }
 
 export interface Testimonial {

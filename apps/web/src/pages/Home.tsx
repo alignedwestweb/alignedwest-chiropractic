@@ -3,7 +3,7 @@ import type { PageType } from "@/components/ui/navigation/types"
 import About from "@/components/about"
 import headshot from "@/assets/headshot.webp"
 import HomeHero from "@/lib/sections/HomeHero"
-import Services from "@/lib/sections/Services"
+import Services from "@/pages/Services"
 import { Details } from "@/lib/blocks/Details"
 import { CTA } from '@/lib/sections/CTASection'
 import BookingDialog from "@/lib/blocks/BookingDialog"

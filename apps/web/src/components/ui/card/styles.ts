@@ -1,50 +1,7 @@
 import { cva, type VariantProps } from "class-variance-authority"
 
-export const cardBaseStyles = cva(
-  "flex rounded-2xl relative overflow-hidden transition-all",
-  {
-    variants: {
-      size: {
-        sm: "",
-        md: "p-4 gap-4",
-        lg: "p-6 gap-4",
-      },
-      color: {
-        default: "",
-        primary: "border-neutral-200",
-        secondary: "border-secondary",
-        contrast: "border-white",
-        critical: "border-error",
-        neutral: "border-neutral-300",
-        promo: "border-primary",
-      },
-      variant: {
-        filled: "",
-        outlined: "bg-transparent border",
-        ghost: "bg-transparent border-0 shadow-none",
-      },
-    },
-    defaultVariants: {
-      size: "md",
-      color: "primary",
-      variant: "filled",
-    },
-    compoundVariants: [
-      { variant: "filled", color: "default", class: "bg-white hover:shadow-md" },
-      { variant: "filled", color: "primary", class: "bg-neutral-50 hover:shadow-md" },
-      { variant: "filled", color: "secondary", class: "bg-secondary hover:shadow-md" },
-      { variant: "filled", color: "contrast", class: "bg-white hover:shadow-md" },
-      { variant: "filled", color: "critical", class: "bg-error text-white hover:shadow-md" },
-      { variant: "filled", color: "neutral", class: "bg-neutral-300 hover:shadow-md" },
-      { variant: "filled", color: "promo", class: "bg-primary text-white hover:shadow-md" },
-    ],
-  }
-)
-
-export type CardBaseVariants = VariantProps<typeof cardBaseStyles>
-
 export const cardStyles = cva(
-  "flex rounded-2xl transition-shadow relative overflow-hidden transition-all",
+  "flex rounded-2xl transition-shadow relative overflow-hidden",
   {
     variants: {
       size: {
@@ -53,7 +10,6 @@ export const cardStyles = cva(
         lg: "p-6 gap-4",
       },
       color: {
-        default: "",
         primary: "border-neutral-200",
         secondary: "border-secondary",
         contrast: "border-white",
@@ -63,7 +19,7 @@ export const cardStyles = cva(
       },
       variant: {
         filled: "",
-        outlined: "bg-transparent border",
+        outlined: "bg-transparent border border-1 border-solid",
         ghost: "bg-transparent border-0 shadow-none",
       },
       orientation: {
@@ -90,9 +46,7 @@ export const cardStyles = cva(
       alignV: "top",
     },
     compoundVariants: [
-      { variant: "filled", color: "default", class: "bg-whhite hover:shadow-md" },
-            { variant: "filled", color: "primary", class: "bg-neutral-50 hover:shadow-md" },
-
+      { variant: "filled", color: "primary", class: "bg-neutral-50 hover:shadow-md" },
       { variant: "filled", color: "secondary", class: "bg-secondary hover:shadow-md" },
       { variant: "filled", color: "contrast", class: "bg-white hover:shadow-md" },
       { variant: "filled", color: "critical", class: "bg-error text-white hover:shadow-md" },

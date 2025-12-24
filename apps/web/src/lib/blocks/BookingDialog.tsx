@@ -19,41 +19,23 @@ interface BookingDialogProps {
 
 const treatments = [
   {
-    value: "spinal-harmony",
-    label: "Gentle Spinal Harmony",
+    value: "adjustments",
+    label: "Chiropractic Adjustments",
+    duration: 15,
+    price: "$50",
+  },
+  {
+    value: "naet",
+    label: "NAET Treatments",
+    duration: 30,
+    price: "$60",
+  },
+  {
+    value: "soul",
+    label: "Soul Alignment Session",
     duration: 60,
-    price: "$95",
-  },
-  {
-    value: "therapeutic-massage",
-    label: "Therapeutic Touch Massage",
-    duration: 75,
-    price: "$110",
-  },
-  {
-    value: "postural-restoration",
-    label: "Postural Restoration",
-    duration: 45,
-    price: "$75",
-  },
-  {
-    value: "athletic-recovery",
-    label: "Athletic Recovery Sanctuary",
-    duration: 90,
     price: "$130",
-  },
-  {
-    value: "wellness-consultation",
-    label: "Wellness Consultation",
-    duration: 90,
-    price: "$160",
-  },
-  {
-    value: "maintenance",
-    label: "Maintenance & Renewal",
-    duration: 45,
-    price: "$70",
-  },
+  }
 ]
 
 const medicalConditions = [
@@ -402,7 +384,7 @@ export default function BookingDialog({ isOpen, onClose, preselectedService }: B
               <div key={s} className="flex items-center">
                 <div
                   className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 ${s < step
-                    ? "bg-linear-to-br from-emerald-500 to-emerald-600 text-white"
+                    ? "bg-secondary text-white"
                     : s === step
                       ? "bg-linear-to-br from-amber-600 to-amber-700 text-white"
                       : "bg-amber-100 text-amber-700"
@@ -412,7 +394,7 @@ export default function BookingDialog({ isOpen, onClose, preselectedService }: B
                 </div>
                 {s < 4 && (
                   <div
-                    className={`w-12 h-0.5 transition-all duration-300 ${s < step ? "bg-emerald-500" : "bg-amber-200"
+                    className={`w-12 h-0.5 transition-all duration-300 ${s < step ? "bg-secondary" : "bg-amber-200"
                       }`}
                   />
                 )}
@@ -973,8 +955,8 @@ export default function BookingDialog({ isOpen, onClose, preselectedService }: B
         {step === 4 && (
           <div className="space-y-6">
             <div className="text-center space-y-4">
-              <div className="w-20 h-20 bg-linear-to-br from-emerald-100 to-emerald-200 rounded-full flex items-center justify-center mx-auto">
-                <CheckCircle2 className="w-10 h-10 text-emerald-700" />
+              <div className="w-20 h-20 bg-secondary rounded-full flex items-center justify-center mx-auto">
+                <CheckCircle2 className="w-10 h-10 text-white" />
               </div>
               <div className="space-y-2">
                 <h3 className="text-2xl text-primary">Your Journey Awaits</h3>

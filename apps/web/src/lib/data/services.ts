@@ -1,46 +1,37 @@
-import {
-  Activity,
-  Heart,
-  Zap,
- } from 'lucide-react'
-import type { ServiceCardProps } from '../blocks/cards/types'
 import img1 from "@/assets/bg-home-hero.webp"
 
-export const services: ServiceCardProps[] = [
+export const services = [
   {
     id: "adjustments",
-    icon: Activity,
-    title: "Spinal Adjustments",
-    description: "Precise manual adjustments to restore proper spinal alignment and reduce pain using gentle, effective techniques.",
+    iconName: "menu",
+    title: "Chiropractic Adjustments",
+    description: "Restore alignment and alleviate discomfort with personalized chiropractic adjustments. Using precise techniques, we target misalignments to improve mobility, reduce pain, and support your body's natural healing processes. Experience tailored care designed to optimize your health and well-being.",
     popular: true,
-    duration: "30 min",
-    features: ["Manual therapy", "Gentle techniques", "Immediate relief"],
-    color: "blue",
-    price: "$95",
-    image: img1
-  },
-  {
-    id: "soul",
-    icon: Heart,
-    title: "Soul Alignment",
-    description: "Specialized care for athletes and active individuals to recover faster and prevent future injuries.",
-    popular: false,
-    duration: "40 min",
-    features: ["Performance optimization", "Injury prevention", "Recovery planning"],
-    color: "red",
-    price: "$50",
+    modality: 'chiropractic',
+    durations: "15 min",
+    prices: "$50",
     image: img1
   },
   {
     id: "naet",
-    icon: Zap,
-    title: "NAET",
-    description: "Comprehensive rehabilitation programs designed to strengthen muscles and restore full function.",
+    iconName: "stars",
+    title: "NAET Treatments",
+    description: "Address allergies and sensitivities with Nambudripad's Allergy Elimination Techniques (NAET). This holistic approach combines chiropractic principles, acupuncture/acupressure, and nutrition to desensitize and balance your body's reaction to allergens, promoting overall wellness and harmony.",
     popular: false,
-    duration: "40 min",
-    features: ["Exercise programs", "Strength training", "Mobility work"],
-    color: "purple",
-    price: "$50",
+    modality: 'energy',
+    durations: "30 min",
+    prices: "$60",
+    image: img1
+  },
+  {
+    id: "soul",
+    iconName: "stars",
+    title: "Soul Alignment Session",
+    description: "A transformative session blending intuitive healing, muscle testing, energy clearing, breathwork, and gentle chiropractic alignment. Designed to release stress, rebalance your energy, and reconnect you with your body’s inner wisdom—helping clear whatever stands in your way.",
+    popular: false,
+    modality: 'energy',
+    durations: "60 min",
+    prices: "$130",
     image: img1
   },
 ]

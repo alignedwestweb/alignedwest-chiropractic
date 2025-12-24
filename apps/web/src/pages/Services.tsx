@@ -27,6 +27,8 @@ type Service = {
   modality?: string
   popularity?: boolean
   iconName?: AvailableIcons
+    bookingUrl: string
+  learnMoreUrl?: string
 }
 
 type ServicesProps = {
@@ -62,6 +64,8 @@ export default function Services({ onBook, onLearnMore }: ServicesProps) {
       modality: String(s.modality ?? ''),
       popularity: Boolean(s.popularity ?? s.popular ?? false),
       iconName: (s.iconName ?? 'sparkles') as AvailableIcons,
+        bookingUrl: s.bookingUrl,
+      learnMoreUrl: s.learnMoreUrl,
     }))
   }, [])
 

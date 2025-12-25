@@ -33,3 +33,11 @@ export interface CardProps extends React.ButtonHTMLAttributes<HTMLButtonElement>
   alignH?: CardHorizAlign
   alignV?: CardVertAlign
 }
+
+export interface CardImageProps extends React.HTMLAttributes<HTMLDivElement> {
+  src?: string
+  alt?: string
+  className?: string
+  background?: boolean
+  fill?: boolean
+}

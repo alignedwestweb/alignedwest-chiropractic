@@ -1,13 +1,14 @@
 import { cn } from "@/lib/utils"
-import type { CardSectionProps } from "@/components/ui/card/types"
+import type { CardProps } from "@/components/ui/card/types"
+import type { HTMLAttributes } from "react"
 
 export function CardContent({
   className,
   children,
   ...props
-}: CardSectionProps) {
+}: CardProps) {
   return (
-    <div className={cn("p-6 pt-0", className)} {...props}>
+    <div className={cn("p-6 pt-0", className)} {...(props as HTMLAttributes<HTMLDivElement>)}>
       {children}
     </div>
   )

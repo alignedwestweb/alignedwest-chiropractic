@@ -135,7 +135,6 @@ export default function Resources() {
           {otherArticles.map((article) => (
             <Card 
               key={article.id} 
-              size="md"
               className="overflow-hidden flex-col border-0 shadow-md hover:shadow-xl transition-all duration-300 group cursor-pointer"
             >
               <div className="relative h-48 overflow-hidden">

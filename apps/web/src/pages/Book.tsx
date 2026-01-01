@@ -440,7 +440,7 @@ export default function BookingFlow() {
                                   <Button 
                                     size="sm"
                                     onClick={() => addToCart(service.id)}
-                                    variant={inCart ? "secondary" : "default"}
+                                    color={inCart ? "secondary" : "primary"}
                                   >
                                     <Plus className="h-4 w-4 mr-1" />
                                     Add to Cart
@@ -494,7 +494,7 @@ export default function BookingFlow() {
                                 <div className="flex items-center justify-between">
                                   <div className="flex items-center gap-2">
                                     <Button
-                                      variant="outline"
+                                      variant="outlined"
                                       size="sm"
                                       className="h-7 w-7 p-0"
                                       onClick={() => updateQuantity(item.serviceId, -1)}
@@ -504,7 +504,7 @@ export default function BookingFlow() {
                                     </Button>
                                     <span className="text-sm w-8 text-center">{item.quantity}</span>
                                     <Button
-                                      variant="outline"
+                                      variant="outlined"
                                       size="sm"
                                       className="h-7 w-7 p-0"
                                       onClick={() => updateQuantity(item.serviceId, 1)}
@@ -595,7 +595,7 @@ export default function BookingFlow() {
                         {timeSlots.map(time => (
                           <Button
                             key={time}
-                            variant={selectedTime === time ? "default" : "outline"}
+                            variant={selectedTime === time ? "filled" : "outlined"}
                             size="sm"
                             onClick={() => setSelectedTime(time)}
                           >
@@ -619,7 +619,7 @@ export default function BookingFlow() {
                   )}
 
                   <div className="flex gap-3 pt-4">
-                    <Button variant="outline" onClick={handleBack} className="flex-1">
+                    <Button variant="outlined" onClick={handleBack} className="flex-1">
                       <ArrowLeft className="mr-2 h-4 w-4" />
                       Back
                     </Button>
@@ -1011,7 +1011,7 @@ export default function BookingFlow() {
               )}
 
               <div className="flex gap-3">
-                <Button variant="outline" onClick={handleBack} className="flex-1">
+                <Button variant="outlined" onClick={handleBack} className="flex-1">
                   <ArrowLeft className="mr-2 h-4 w-4" />
                   Back
                 </Button>
@@ -1107,7 +1107,7 @@ export default function BookingFlow() {
 
                   {/* Action Buttons */}
                   <div className="flex gap-3 pt-4">
-                    <Button variant="outline" onClick={handleBack} className="flex-1">
+                    <Button variant="outlined" onClick={handleBack} className="flex-1">
                       <ArrowLeft className="mr-2 h-4 w-4" />
                       Back
                     </Button>

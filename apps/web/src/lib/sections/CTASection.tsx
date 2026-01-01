@@ -30,7 +30,7 @@ export function CTA({ onNavigate }: { onNavigate: (page: PageType) => void }) {
           </Button>
           <Button
             onClick={() => onNavigate('about')}
-            variant="outline"
+            variant="outlined"
             className="border-emerald-500 text-emerald-600 hover:bg-emerald-50 px-8 py-4 rounded-full"
           >
             Learn About Weston

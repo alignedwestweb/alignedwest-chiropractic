@@ -162,7 +162,7 @@ export default function ClinicInfo() {
                   ))}
                 </div>
 
-                <Button className="w-full mt-6" variant="outline">
+                <Button className="w-full mt-6" variant="outlined">
                   <Calendar className="h-4 w-4 mr-2" />
                   Book Appointment
                 </Button>

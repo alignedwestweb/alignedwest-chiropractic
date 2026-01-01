@@ -41,10 +41,10 @@ export function Testimonials() {
         </AnimatedSection>
 
         <div className="flex justify-center gap-4 mb-8">
-          <Button onClick={prevTestimonial} variant="outline" size="lg" className="p-3">
+          <Button onClick={prevTestimonial} variant="outlined" size="lg" className="p-3">
             <ChevronLeft className="h-5 w-5" />
           </Button>
-          <Button onClick={nextTestimonial} variant="outline" size="lg" className="p-3">
+          <Button onClick={nextTestimonial} variant="outlined" size="lg" className="p-3">
             <ChevronRight className="h-5 w-5" />
           </Button>
         </div>

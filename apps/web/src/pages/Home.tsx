@@ -6,9 +6,10 @@ import HomeHero from "@/lib/sections/HomeHero"
 import Services from "@/pages/Services"
 import { Details } from "@/lib/blocks/Details"
 import { CTA } from '@/lib/sections/CTASection'
-import BookingDialog from "@/lib/blocks/BookingDialog"
+import BookingDialog from "@/lib/blocks/booking/BookingDialog"
 import { Toaster } from "@/components/ui/sonner"
 import Info from "@/lib/sections/Info"
+import type { ServiceSelection } from "@/lib/blocks/booking/types"
 
 export interface HomeProps {
   onNavigate: (page: PageType) => void;
@@ -47,7 +48,7 @@ export default function Home({ onNavigate }: HomeProps) {
           <BookingDialog
             isOpen={isBookingOpen}
             onClose={closeBooking}
-            preselectedService={preselectedService}
+            preselectedService={preselectedService as ServiceSelection | undefined}
           />
 
           <Toaster position="top-center" richColors />

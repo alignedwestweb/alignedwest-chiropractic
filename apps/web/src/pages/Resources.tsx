@@ -171,7 +171,7 @@ export default function Resources() {
 
         {/* Load More Button */}
         <div className="text-center mt-12">
-          <Button variant="outline" size="lg" className="group">
+          <Button variant="outlined" size="lg" className="group">
             View All Articles
             <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
           </Button>

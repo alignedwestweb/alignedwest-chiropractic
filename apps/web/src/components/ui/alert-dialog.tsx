@@ -14,7 +14,7 @@ function AlertDialog({
 function AlertDialogTrigger({
   ...props
 }: React.ComponentProps<typeof AlertDialogPrimitive.Trigger>) {
-  console.log("🧪 Alert rendered");
+  console.log("🧪 Alert rendered")
   return (
     <AlertDialogPrimitive.Trigger data-slot="alert-dialog-trigger" {...props} />
   )
@@ -23,7 +23,7 @@ function AlertDialogTrigger({
 function AlertDialogPortal({
   ...props
 }: React.ComponentProps<typeof AlertDialogPrimitive.Portal>) {
-  console.log("🧪 Alert rendered");
+  console.log("🧪 Alert rendered")
   return (
     <AlertDialogPrimitive.Portal data-slot="alert-dialog-portal" {...props} />
   )
@@ -33,7 +33,7 @@ function AlertDialogOverlay({
   className,
   ...props
 }: React.ComponentProps<typeof AlertDialogPrimitive.Overlay>) {
-  console.log("🧪 Alert rendered");
+  console.log("🧪 Alert rendered")
   return (
     <AlertDialogPrimitive.Overlay
       data-slot="alert-dialog-overlay"
@@ -50,7 +50,7 @@ function AlertDialogContent({
   className,
   ...props
 }: React.ComponentProps<typeof AlertDialogPrimitive.Content>) {
-  console.log("🧪 Alert rendered");
+  console.log("🧪 Alert rendered")
   return (
     <AlertDialogPortal>
       <AlertDialogOverlay />
@@ -70,7 +70,7 @@ function AlertDialogHeader({
   className,
   ...props
 }: React.ComponentProps<"div">) {
-  console.log("🧪 Alert rendered");
+  console.log("🧪 Alert rendered")
   return (
     <div
       data-slot="alert-dialog-header"
@@ -84,7 +84,7 @@ function AlertDialogFooter({
   className,
   ...props
 }: React.ComponentProps<"div">) {
-  console.log("🧪 Alert rendered");
+  console.log("🧪 Alert rendered")
   return (
     <div
       data-slot="alert-dialog-footer"
@@ -101,7 +101,7 @@ function AlertDialogTitle({
   className,
   ...props
 }: React.ComponentProps<typeof AlertDialogPrimitive.Title>) {
-  console.log("🧪 Alert rendered");
+  console.log("🧪 Alert rendered")
   return (
     <AlertDialogPrimitive.Title
       data-slot="alert-dialog-title"
@@ -115,7 +115,7 @@ function AlertDialogDescription({
   className,
   ...props
 }: React.ComponentProps<typeof AlertDialogPrimitive.Description>) {
-  console.log("🧪 Alert rendered");
+  console.log("🧪 Alert rendered")
   return (
     <AlertDialogPrimitive.Description
       data-slot="alert-dialog-description"
@@ -129,7 +129,7 @@ function AlertDialogAction({
   className,
   ...props
 }: React.ComponentProps<typeof AlertDialogPrimitive.Action>) {
-  console.log("🧪 Alert rendered");
+  console.log("🧪 Alert rendered")
   return (
     <AlertDialogPrimitive.Action
       className={cn(buttonVariants(), className)}
@@ -142,10 +142,10 @@ function AlertDialogCancel({
   className,
   ...props
 }: React.ComponentProps<typeof AlertDialogPrimitive.Cancel>) {
-  console.log("🧪 Alert rendered");
+  console.log("🧪 Alert rendered")
   return (
     <AlertDialogPrimitive.Cancel
-      className={cn(buttonVariants({ variant: "outline" }), className)}
+      className={cn(buttonVariants({ variant: "outlined" }), className)}
       {...props}
     />
   )

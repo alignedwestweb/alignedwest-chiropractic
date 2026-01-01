@@ -274,11 +274,11 @@ export default function HipaaCompliance() {
         {/* Download and Actions */}
         <div className="text-center space-y-4">
           <div className="flex justify-center gap-4">
-            <Button variant="outline">
+            <Button variant="outlined">
               <Download className="mr-2 h-4 w-4" />
               Download Full HIPAA Notice
             </Button>
-            <Button variant="outline">
+            <Button variant="outlined">
               <FileText className="mr-2 h-4 w-4" />
               Download Privacy Policy
             </Button>

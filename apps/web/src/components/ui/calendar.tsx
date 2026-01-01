@@ -8,7 +8,7 @@ import {
 import { DayButton, DayPicker, getDefaultClassNames } from "react-day-picker"
 
 import { cn } from "@/lib/utils"
-import { Button, buttonVariants } from "@/components/ui/button"
+import { Button, buttonVariants } from "@/components/ui/button/button-shad"
 
 function Calendar({
   className,
@@ -24,7 +24,7 @@ function Calendar({
 }) {
   const defaultClassNames = getDefaultClassNames()
 
-  console.log("🧪 Alert rendered");
+  console.log("🧪 Alert rendered")
   return (
     <DayPicker
       showOutsideDays={showOutsideDays}
@@ -126,7 +126,7 @@ function Calendar({
       }}
       components={{
         Root: ({ className, rootRef, ...props }) => {
-  console.log("🧪 Alert rendered");
+  console.log("🧪 Alert rendered")
           return (
             <div
               data-slot="calendar"
@@ -138,14 +138,14 @@ function Calendar({
         },
         Chevron: ({ className, orientation, ...props }) => {
           if (orientation === "left") {
-  console.log("🧪 Alert rendered");
+  console.log("🧪 Alert rendered")
             return (
               <ChevronLeftIcon className={cn("size-4", className)} {...props} />
             )
           }
 
           if (orientation === "right") {
-  console.log("🧪 Alert rendered");
+  console.log("🧪 Alert rendered")
             return (
               <ChevronRightIcon
                 className={cn("size-4", className)}
@@ -154,14 +154,14 @@ function Calendar({
             )
           }
 
-  console.log("🧪 Alert rendered");
+  console.log("🧪 Alert rendered")
           return (
             <ChevronDownIcon className={cn("size-4", className)} {...props} />
           )
         },
         DayButton: CalendarDayButton,
         WeekNumber: ({ children, ...props }) => {
-  console.log("🧪 Alert rendered");
+  console.log("🧪 Alert rendered")
           return (
             <td {...props}>
               <div className="flex size-(--cell-size) items-center justify-center text-center">
@@ -190,12 +190,12 @@ function CalendarDayButton({
     if (modifiers.focused) ref.current?.focus()
   }, [modifiers.focused])
 
-  console.log("🧪 Alert rendered");
+  console.log("🧪 Alert rendered")
   return (
     <Button
       ref={ref}
       variant="ghost"
-      size="icon"
+      size="sm"
       data-day={day.date.toLocaleDateString()}
       data-selected-single={
         modifiers.selected &&

@@ -215,7 +215,7 @@ export default function AuthFlow({ open, onOpenChange, defaultTab = 'signin' }: 
                 <div className="grid grid-cols-3 gap-3">
                   <Button
                     type="button"
-                    variant="outline"
+                    variant="outlined"
                     onClick={() => handleSocialLogin('Google')}
                   >
                     <svg className="h-5 w-5" viewBox="0 0 24 24">
@@ -239,7 +239,7 @@ export default function AuthFlow({ open, onOpenChange, defaultTab = 'signin' }: 
                   </Button>
                   <Button
                     type="button"
-                    variant="outline"
+                    variant="outlined"
                     onClick={() => handleSocialLogin('Apple')}
                   >
                     <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
@@ -248,7 +248,7 @@ export default function AuthFlow({ open, onOpenChange, defaultTab = 'signin' }: 
                   </Button>
                   <Button
                     type="button"
-                    variant="outline"
+                    variant="outlined"
                     onClick={() => handleSocialLogin('Facebook')}
                   >
                     <svg className="h-5 w-5" fill="#1877F2" viewBox="0 0 24 24">
@@ -449,7 +449,7 @@ export default function AuthFlow({ open, onOpenChange, defaultTab = 'signin' }: 
               <div className="flex gap-3">
                 <Button
                   type="button"
-                  variant="outline"
+                  variant="outlined"
                   onClick={() => setShowForgotPassword(false)}
                   className="flex-1"
                 >

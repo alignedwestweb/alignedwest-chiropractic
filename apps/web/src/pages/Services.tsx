@@ -312,7 +312,7 @@ export default function Services({ onBook, onLearnMore }: ServicesProps) {
                     </Button>
 
                     <Button
-                      variant="outline"
+                      variant="outlined"
                       onClick={() => onLearnMore?.(service.id)}
                       className="flex-1 rounded-md"
                     >

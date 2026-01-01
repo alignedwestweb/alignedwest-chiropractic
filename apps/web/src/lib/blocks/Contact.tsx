@@ -126,7 +126,7 @@ export function Contact() {
                     New clients receive 15% off their first treatment. Please arrive 15 minutes early to complete your wellness consultation.
                   </p>
                   <Button 
-                    variant="outline" 
+                    variant="outlined" 
                     className="border-purple-600 text-purple-700 hover:bg-purple-600 hover:text-white"
                   >
                     Learn More

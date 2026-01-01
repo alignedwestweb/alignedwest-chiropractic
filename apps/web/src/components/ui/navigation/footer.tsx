@@ -40,21 +40,21 @@ export function Footer({ onNavigate }: { onNavigate: (page: PageType) => void })
 
               <div className="flex space-x-4">
                 <Button
-                  variant="outline"
+                  variant="outlined"
                   size="sm"
                   className="rounded-full border-amber-200 hover:border-amber-400 hover:bg-amber-50"
                 >
                   <Facebook className="w-4 h-4" />
                 </Button>
                 <Button
-                  variant="outline"
+                  variant="outlined"
                   size="sm"
                   className="rounded-full border-amber-200 hover:border-amber-400 hover:bg-amber-50"
                 >
                   <Twitter className="w-4 h-4" />
                 </Button>
                 <Button
-                  variant="outline"
+                  variant="outlined"
                   size="sm"
                   className="rounded-full border-amber-200 hover:border-amber-400 hover:bg-amber-50"
                 >

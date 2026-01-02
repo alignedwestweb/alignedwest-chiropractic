@@ -1,4 +1,6 @@
-import img1 from "@/assets/bg-home-hero.webp"
+import img1 from "/assets/images/imgServicesAlign.webp"
+import img2 from "/assets/images/imgServicesNAET.jpg"
+import img3 from "/assets/images/imgServicesSoul.jpg"
 
 export const services = [
   {
@@ -21,7 +23,7 @@ export const services = [
     modality: 'energy',
     durations: "30 min",
     prices: "$60",
-    image: img1
+    image: img2
   },
   {
     id: "soul",
@@ -32,6 +34,6 @@ export const services = [
     modality: 'energy',
     durations: "60 min",
     prices: "$130",
-    image: img1
+    image: img3
   },
 ]

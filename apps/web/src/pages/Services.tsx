@@ -325,11 +325,7 @@ export default function Services({ onBook, onLearnMore }: ServicesProps) {
           ))}
         </div>
 
-        <div className="text-center mt-16">
-          <Button size="lg" className="px-8" onClick={() => onBook?.('consultation')}>
-            Schedule a Consultation
-          </Button>
-        </div>
+       
       </div>
     </section>
   )

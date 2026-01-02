@@ -1,4 +1,4 @@
-import { useState } from "react"
+import React from "react"
 import type { PageType } from "@/components/ui/navigation/types"
 import About from "@/components/about"
 import headshot from "@/assets/headshot.webp"
@@ -6,29 +6,29 @@ import HomeHero from "@/lib/sections/HomeHero"
 import Services from "@/pages/Services"
 import { Details } from "@/lib/blocks/Details"
 import { CTA } from '@/lib/sections/CTASection'
-import BookingDialog from "@/lib/blocks/booking/BookingDialog"
+import {BookingDialog} from "@/lib/blocks/JotformsDialog"
+import { buildBookingSrc } from "@/lib/blocks/buildBooking"
 import { Toaster } from "@/components/ui/sonner"
 import Info from "@/lib/sections/Info"
-import type { ServiceSelection } from "@/lib/blocks/booking/types"
 
 export interface HomeProps {
   onNavigate: (page: PageType) => void;
 }
 
 export default function Home({ onNavigate }: HomeProps) {
-  const [isBookingOpen, setIsBookingOpen] = useState(false)
-  const [preselectedService, setPreselectedService] = useState<string | undefined>(undefined)
+  const [isBookingOpen, setIsBookingOpen] = React.useState(false)
+  const [bookingSrc, setBookingSrc] = React.useState(buildBookingSrc())
 
-  // ✅ open the booking dialog (optionally with a service ID)
-  const openBooking = (serviceId?: string) => {
-    setPreselectedService(serviceId)
+  function openBooking(serviceType?: string) {
+    setBookingSrc(buildBookingSrc({ serviceType }))
     setIsBookingOpen(true)
   }
 
-  const closeBooking = () => {
+  function closeBooking() {
     setIsBookingOpen(false)
-    setPreselectedService(undefined)
   }
+
+  
 
   return (
     <div className="flex relative size-full bg-white">
@@ -39,17 +39,17 @@ export default function Home({ onNavigate }: HomeProps) {
           <HomeHero onNavigate={onNavigate} onBookNow={() => openBooking()} />
 
           <About image={headshot} />
-          <Services />
-          <Details />
+<Services onBook={(service) => openBooking(service)} />          <Details />
           <Info />
           <CTA onNavigate={onNavigate} />
 
           {/* ✅ Booking dialog opens when user clicks "Book Now" */}
           <BookingDialog
-            isOpen={isBookingOpen}
-            onClose={closeBooking}
-            preselectedService={preselectedService as ServiceSelection | undefined}
-          />
+        isOpen={isBookingOpen}
+        onClose={closeBooking}
+        src={bookingSrc}
+        title="Appointments"
+      />
 
           <Toaster position="top-center" richColors />
         </div>

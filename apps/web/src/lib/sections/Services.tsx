@@ -2,7 +2,6 @@ import { motion } from 'framer-motion'
 import { Heart, Clock } from 'lucide-react'
 import type { PageType } from "@/components/ui/navigation/types"
 import { services } from '@/lib/data/services' // or same file if still inline
-import { Button } from '@/components/ui/button'
 
 export default function Services({ onNavigate }: { onNavigate: (page: PageType) => void }) {
   return (
@@ -97,11 +96,7 @@ export default function Services({ onNavigate }: { onNavigate: (page: PageType) 
             ))}
           </div>
 
-        <div className="text-center mt-16">
-          <Button size="lg" className="px-8">
-            Schedule a Consultation
-          </Button>
-        </div>
+        
       </div>
     </section>
   )

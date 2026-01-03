@@ -79,7 +79,7 @@ export function getImageClasses(
   orientation: "vertical" | "horizontal" = "vertical"
 ) {
   if (imagePosition === "inline") {
-    return orientation === "vertical" ? "w-full h-50" : "w-72 h-full"
+    return orientation === "vertical" ? "w-full h-30" : "w-72 h-full"
   }
   if (imagePosition === "background") {
     return "absolute inset-0 w-full h-full object-cover z-0"

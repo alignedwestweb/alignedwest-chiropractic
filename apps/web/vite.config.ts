@@ -4,6 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
 import { nodePolyfills } from 'vite-plugin-node-polyfills'
 import { defineConfig } from 'vite'
+import mdx from "@mdx-js/rollup"
 
 // https://vite.dev/config/
 import { fileURLToPath } from 'node:url'
@@ -13,7 +14,15 @@ const dirname =
 
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 export default defineConfig({
-  plugins: [react(), tailwindcss(), nodePolyfills()],
+  plugins: [
+    mdx({
+      jsxImportSource: 'react',
+      providerImportSource: '@mdx-js/react',
+    }),
+    react(),
+    tailwindcss(),
+    nodePolyfills(),
+  ],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),

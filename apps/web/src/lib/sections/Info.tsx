@@ -35,8 +35,8 @@ export default function Info() {
         {/* Our Values */}
         <div className="mb-16">
           <div className="text-center mb-12">
-            <h3 className="text-2xl lg:text-3xl mb-4 text-gray-900">Our Values</h3>
-            <p className="text-lg text-gray-600">
+            <h3 className="text-2xl lg:text-3xl mb-4 text-stone-900">Our Values</h3>
+            <p className="text-lg text-stone-800">
               The principles that guide everything we do
             </p>
           </div>
@@ -52,7 +52,7 @@ export default function Info() {
                     </div>
                   </div>
                   <h4 className="text-xl mb-3">{value.title}</h4>
-                  <p className="text-gray-600 leading-relaxed">{value.description}</p>
+                  <p className="text-stone-800 leading-relaxed">{value.description}</p>
                 </div>
               )
             })}
@@ -60,7 +60,7 @@ export default function Info() {
         </div>
 
         {/* Clinic Information */}
-        <Card className="bg-gray-50">
+        <Card className="bg-stone-50">
           <CardContent className="p-8">
             <div className="grid md:grid-cols-2 gap-8">
               <div>
@@ -70,7 +70,7 @@ export default function Info() {
                     <MapPin className="h-5 w-5 text-primary mt-1" />
                     <div>
                       <h5 className="mb-1">Location</h5>
-                      <p className="text-gray-600">
+                      <p className="text-stone-800">
                         574 S State Street
                       <br />
                       Suite 232
@@ -84,10 +84,13 @@ export default function Info() {
                     <Clock className="h-5 w-5 text-primary mt-1" />
                     <div>
                       <h5 className="mb-1">Hours</h5>
-                      <div className="text-gray-600 space-y-1">
-                        <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
-                        <p>Saturday: 9:00 AM - 2:00 PM</p>
-                        <p>Sunday: Closed</p>
+                      <div className="text-stone-800 space-y-1">
+                        <p>Monday: 10:00 AM - 7:00 PM</p>
+                        <p>Tuesday: 10:00 AM - 5:00 PM</p>
+                        <p>Wednesday: 1:00 PM - 7:00 PM</p>
+                        <p>Thursday: 11:00 AM - 6:00 PM</p>
+                        <p>Friday: 8:00 AM - 4:00 PM</p>
+                        <p>Saturday & Sunday: Closed</p>
                       </div>
                     </div>
                   </div>
@@ -105,21 +108,21 @@ export default function Info() {
                 <div className="space-y-4">
                   <div>
                     <h5 className="mb-2">Your First Visit</h5>
-                    <p className="text-gray-600 text-sm">
+                    <p className="text-stone-800 text-sm">
                       We'll conduct a comprehensive evaluation including your health history, 
                       physical examination, and discuss your treatment goals.
                     </p>
                   </div>
                   <div>
                     <h5 className="mb-2">Treatment Plans</h5>
-                    <p className="text-gray-600 text-sm">
+                    <p className="text-stone-800 text-sm">
                       Each treatment plan is customized to your specific needs and may include 
                       adjustments, exercises, and lifestyle recommendations.
                     </p>
                   </div>
                   <div>
                     <h5 className="mb-2">Follow-up Care</h5>
-                    <p className="text-gray-600 text-sm">
+                    <p className="text-stone-800 text-sm">
                       We'll monitor your progress and adjust your treatment plan as needed 
                       to ensure the best possible outcomes.
                     </p>

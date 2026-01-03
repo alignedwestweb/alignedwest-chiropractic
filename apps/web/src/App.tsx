@@ -10,9 +10,11 @@ import "./index.css"
 import { Navigation } from "@/components/ui/navigation"
 import type { PageType } from "@/components/ui/navigation/types"
 import { Footer } from "./components/ui/navigation/footer"
+import { ScrollToTop } from "@/lib/context/ScrollToTop"
 
 function App() {
     const navigate = useNavigate()
+
 
   const [currentPage, setCurrentPage] = useState<PageType>('home')
   const handleNavigate = (page: PageType) => {
@@ -45,11 +47,17 @@ function App() {
 
   return (
     <>
+    <ScrollToTop />
       <Navigation currentPage={currentPage} onNavigate={handleNavigate} />
       <Routes>
         <Route path="/" element={<Home onNavigate={handleNavigate} />} />
         <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
+        <Route path="/services" element={<Services 
+        onLearnMore={(slug) => {
+                // IMPORTANT: use React Router navigation, not pushState
+                navigate(`/resources?article=${encodeURIComponent(slug)}`)
+              }}
+              />} />
         <Route path="/resources" element={<Resources />} />
         <Route path="/clinic" element={<ClinicInfo />} />
 

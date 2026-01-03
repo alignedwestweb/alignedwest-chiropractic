@@ -27,13 +27,13 @@ type Service = {
   modality?: string
   popularity?: boolean
   iconName?: AvailableIcons
-    bookingUrl: string
+  bookingUrl: string
   learnMoreUrl?: string
 }
 
 type ServicesProps = {
   onBook?: (id: string) => void
-  onLearnMore?: (id: string) => void
+    onLearnMore?: (service: string) => void
 }
 
 const toMinutes = (durations: string): number[] => {
@@ -264,8 +264,8 @@ export default function Services({ onBook, onLearnMore }: ServicesProps) {
 
                 {/* Most Loved */}
                 {service.popularity && (
-                  <div className="absolute top-4 left-4 text-secondary bg-white/70 backdrop-blur-lg rounded-full px-4 py-1.5 flex items-center justify-center gap-2">
-                    <span className="text-[10.5px] font-semibold">Most Loved</span>
+                  <div className="absolute top-4 left-4 text-secondary bg-white/90 backdrop-blur-lg rounded-full px-4 py-1.5 flex items-center justify-center gap-2">
+                    <span className="text-xs font-semibold">Most Loved</span>
                   </div>
                 )}
 
@@ -313,7 +313,7 @@ export default function Services({ onBook, onLearnMore }: ServicesProps) {
 
                     <Button
                       variant="outlined"
-                      onClick={() => onLearnMore?.(service.id)}
+                      onClick={() => onLearnMore?.(service.learnMoreUrl ?? service.id)}
                       className="flex-1 rounded-md"
                     >
                       Learn More

@@ -39,7 +39,12 @@ export default function Home({ onNavigate }: HomeProps) {
           <HomeHero onNavigate={onNavigate} onBookNow={() => openBooking()} />
 
           <About image={headshot} />
-<Services onBook={(service) => openBooking(service)} />          <Details />
+<Services onBook={(service) => openBooking(service)} onLearnMore={(slug) => {
+    const url = `/resources?article=${encodeURIComponent(slug)}`
+    window.history.pushState({}, "", url)
+    window.dispatchEvent(new PopStateEvent("popstate")) // important: tells React “URL changed”
+  }}
+   />          <Details />
           <Info />
           <CTA onNavigate={onNavigate} />
 

@@ -5,7 +5,7 @@ import { GraduationCap, Users, Clock, Heart, Sparkles, Leaf } from "lucide-react
 
 const achievements = [
   { icon: Users, value: "1,000+", label: "Souls Nurtured" },
-  { icon: Clock, value: "15+", label: "Years of Devotion" },
+  { icon: Clock, value: "13+", label: "Years of Devotion" },
   { icon: Heart, value: "99%", label: "Love & Satisfaction" },
   { icon: Sparkles, value: "4", label: "Healing Modalities" }
 ]

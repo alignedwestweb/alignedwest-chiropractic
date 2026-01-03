@@ -1,9 +1,12 @@
 import { motion } from "framer-motion"
 import type { PageType } from "@/components/ui/navigation/types"
 import { Button } from "@/components/ui/button"
+import { useBooking } from '@/lib/blocks/BookingProvider'
 
 export function CTA({ onNavigate }: { onNavigate: (page: PageType) => void }) {
 
+    const { openBooking } = useBooking()
+  
   return (
     <motion.section
       className="py-20 w-full bg-white relative z-30"
@@ -23,7 +26,7 @@ export function CTA({ onNavigate }: { onNavigate: (page: PageType) => void }) {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button
-            onClick={() => onNavigate("booking")}
+            onClick={() => openBooking()}
             className="bg-linear-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
           >
             Book Your Session

@@ -14,7 +14,9 @@ const getCategoryColor = (category: string) => {
     "Benefits": "bg-ocean-100 text-ocean-700",
     "Wellness": "bg-sage-100 text-sage-700",
     "Prevention": "bg-lavender-100 text-lavender-700",
-    "NAET": "bg-amber-100 text-amber-700"
+    "NAET": "bg-amber-100 text-amber-700",
+    "Energy": "bg-mint-100 text-mint-700",
+    "Apprenticeship": "bg-rose-100 text-rose-700",
   }
   return colors[category as keyof typeof colors] || "bg-gray-100 text-gray-700"
 }
@@ -179,12 +181,7 @@ export default function Resources() {
             </div>
 
             {/* Load More Button */}
-    <div className="text-center mt-12">
-      <Button variant="outlined" size="lg" className="group">
-        View All Articles
-        <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-      </Button>
-    </div>
+    
   </>
 )}
 </div>

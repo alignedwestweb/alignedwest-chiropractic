@@ -122,7 +122,9 @@ export function Navigation({ onNavigate, heroHeight = 600 }: NavigationProps) {
                 onClick={toggleMobileMenu}
                 className={cn(
                   "flex lg:hidden p-2 items-center text-white justify-center rounded-md shadow-md transition-all font-semibold text-sm uppercase",
-                  isHomePage ? "bg-white/20 hover:bg-white/30" : "bg-primary hover:bg-primary-dark"
+                  isHomePage && !isScrolled
+                  ? "bg-white/20 hover:bg-white/30"
+                  : "bg-primary hover:bg-primary-dark"
                 )}
                 aria-label="Toggle mobile menu"
               >
@@ -135,7 +137,7 @@ export function Navigation({ onNavigate, heroHeight = 600 }: NavigationProps) {
 
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
-        <div className="fixed top-0 left-0 z-40 lg:z-40 md:z-40 sm:z-40 w-full h-screen bg-primary-95 backdrop-blur-md shadow-xl flex flex-col overflow-hidden">
+        <div className="fixed top-0 left-0 z-40 lg:z-40 md:z-40 sm:z-40 w-full h-screen bg-white/90 backdrop-blur-md shadow-xl flex flex-col overflow-hidden">
           <div className="flex flex-col flex-grow overflow-y-auto h-full px-6 py-6 pt-50">
             <ul className="flex flex-col gap-4">
               {navitems.map((item) => (
@@ -143,12 +145,36 @@ export function Navigation({ onNavigate, heroHeight = 600 }: NavigationProps) {
                   <Link
                     to={`/${item.page}`}
                     onClick={() => { onNavigate(item.page); setIsMobileMenuOpen(false) }}
-                    className="block text-white font-semibold text-lg py-2 hover:text-secondary transition"
+                    className="block text-default font-semibold text-lg py-2 hover:text-primary transition"
                   >
                     {item.text}
                   </Link>
                 </li>
               ))}
+              <div className="flex items-center gap-4 mt-6">
+              <button
+                  onClick={() => onNavigate("signin")}
+                  className={cn(
+                    "px-4 py-2 rounded-lg border transition-all duration-500 font-semibold",
+                    isHomePage && !isScrolled
+                      ? "border-white text-white hover:bg-white hover:text-primary"
+                      : "border-primary text-primary hover:bg-primary hover:text-white"
+                  )}
+                >
+                  Sign In
+                </button>
+                <button
+                  onClick={() => openBooking()}
+                  className={cn(
+                    "px-4 py-2 rounded-lg transition-all duration-500 font-semibold backdrop-blur-sm shadow-md",
+                    isHomePage && !isScrolled
+                      ? "bg-white/20 text-white hover:bg-white/30"
+                      : "bg-primary text-white hover:bg-primary-dark"
+                  )}
+                >
+                  Book Now
+                </button>
+                </div>
             </ul>
           </div>
         </div>

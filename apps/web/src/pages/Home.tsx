@@ -6,7 +6,7 @@ import HomeHero from "@/lib/sections/HomeHero"
 import Services from "@/pages/Services"
 import { Details } from "@/lib/blocks/Details"
 import { CTA } from '@/lib/sections/CTASection'
-import {BookingDialog} from "@/lib/blocks/JotformsDialog"
+import { BookingDialog } from "@/lib/blocks/JotformsDialog"
 import { buildBookingSrc } from "@/lib/blocks/buildBooking"
 import { Toaster } from "@/components/ui/sonner"
 import Info from "@/lib/sections/Info"
@@ -28,33 +28,29 @@ export default function Home({ onNavigate }: HomeProps) {
     setIsBookingOpen(false)
   }
 
-  
-
   return (
     <div className="flex relative size-full bg-white">
       <div className="flex flex-col items-center relative size-full">
         <div className="box-border flex flex-col items-center justify-start size-full">
-          
-          {/* 👇 pass openBooking to Hero */}
-          <HomeHero onNavigate={onNavigate} onBookNow={() => openBooking()} />
 
+          <HomeHero onNavigate={onNavigate} onBookNow={() => openBooking()} />
           <About image={headshot} />
-<Services onBook={(service) => openBooking(service)} onLearnMore={(slug) => {
-    const url = `/resources?article=${encodeURIComponent(slug)}`
-    window.history.pushState({}, "", url)
-    window.dispatchEvent(new PopStateEvent("popstate")) // important: tells React “URL changed”
-  }}
-   />          <Details />
+          <Services onBook={(service) => openBooking(service)} onLearnMore={(slug) => {
+            const url = `/resources?article=${encodeURIComponent(slug)}`
+            window.history.pushState({}, "", url)
+            window.dispatchEvent(new PopStateEvent("popstate"))
+          }}
+          />
+          <Details />
           <Info />
           <CTA onNavigate={onNavigate} />
 
-          {/* ✅ Booking dialog opens when user clicks "Book Now" */}
           <BookingDialog
-        isOpen={isBookingOpen}
-        onClose={closeBooking}
-        src={bookingSrc}
-        title="Appointments"
-      />
+            isOpen={isBookingOpen}
+            onClose={closeBooking}
+            src={bookingSrc}
+            title="Appointments"
+          />
 
           <Toaster position="top-center" richColors />
         </div>

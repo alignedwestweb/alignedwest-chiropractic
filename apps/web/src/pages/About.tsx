@@ -6,7 +6,7 @@ import headshot from "@/assets/headshot.webp"
 
 const achievements = [
   { icon: Users, value: "3,000+", label: "Souls Nurtured" },
-  { icon: Clock, value: "15+", label: "Years of Devotion" },
+  { icon: Clock, value: "13+", label: "Years of Devotion" },
   { icon: Heart, value: "99%", label: "Love & Satisfaction" },
   { icon: Sparkles, value: "4", label: "Healing Modalities" }
 ]

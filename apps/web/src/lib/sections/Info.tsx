@@ -26,6 +26,10 @@ const values = [
   }
 ]
 
+const openDirections = (url: string) => {
+  window.open(url, "_blank")
+}
+
 export default function Info() {
   return (
     <section id="about" className="relative py-20 bg-white w-full" style={{ zIndex: 20 }}>
@@ -97,7 +101,7 @@ export default function Info() {
                 </div>
 
                 <div className="mt-6">
-                  <Button>
+                  <Button onClick={() => openDirections("https://share.google/PU4H1IOu4aYjYUIWu")}>
                     Get Directions
                   </Button>
                 </div>

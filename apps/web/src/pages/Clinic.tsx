@@ -13,6 +13,7 @@ import {
   Train,
   AlertCircle
 } from 'lucide-react'
+import { useBooking } from '@/lib/blocks/BookingProvider'
 
 const businessHours = [
   { day: 'Monday', open: '10:00', close: '19:00' },
@@ -88,6 +89,8 @@ export default function ClinicInfo() {
   const todayHours = businessHours[mappedIdx]
   const isOpenNow = isTimeWithinRange(todayHours?.open, todayHours?.close)
 
+    const { openBooking } = useBooking()
+  
   return (
     <section id="clinic-info" className="relative pt-50 pb-24 bg-white" style={{ zIndex: 10 }}>
       <div className="container mx-auto px-4 max-w-7xl">
@@ -229,7 +232,7 @@ export default function ClinicInfo() {
                   })}
                 </div>
 
-                <Button className="w-full mt-6" variant="outlined">
+                <Button className="w-full mt-6" variant="outlined" onClick={() => openBooking()}>
                   <Calendar className="h-4 w-4 mr-2" />
                   Book Appointment
                 </Button>

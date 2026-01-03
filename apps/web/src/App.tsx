@@ -11,6 +11,7 @@ import { Navigation } from "@/components/ui/navigation"
 import type { PageType } from "@/components/ui/navigation/types"
 import { Footer } from "./components/ui/navigation/footer"
 import { ScrollToTop } from "@/lib/context/ScrollToTop"
+import JotformAgent from "@/lib/blocks/ChatBot"
 
 function App() {
     const navigate = useNavigate()
@@ -62,6 +63,7 @@ function App() {
         <Route path="/clinic" element={<ClinicInfo />} />
 
       </Routes>
+      <JotformAgent />
       <Footer onNavigate={handleNavigate} />
     </>
   )

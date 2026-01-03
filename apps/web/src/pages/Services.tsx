@@ -12,6 +12,7 @@ import {
 import { services } from '@/lib/data/services'
 import { Icon as AppIcon } from '@/components/ui/Icon'
 import type { AvailableIcons } from '@/components/ui/Icon/mapping'
+import { useBooking } from '@/lib/blocks/BookingProvider'
 
 type DurationFilter = 'all' | '30' | '60' | '90'
 type ModalityFilter = 'all' | 'massage' | 'energy'
@@ -48,10 +49,12 @@ const toPriceNumber = (prices: string): number => {
   return Number.isFinite(n) ? n : Infinity
 }
 
-export default function Services({ onBook, onLearnMore }: ServicesProps) {
+export default function Services({ onLearnMore }: ServicesProps) {
   const [durationFilter, setDurationFilter] = useState<DurationFilter>('all')
   const [modalityFilter, setModalityFilter] = useState<ModalityFilter>('all')
   const [sortBy, setSortBy] = useState<SortOption>('popular')
+
+    const { openBooking } = useBooking()
 
   const normalizedServices: Service[] = useMemo(() => {
     return (services as any[]).map((s) => ({
@@ -305,7 +308,7 @@ export default function Services({ onBook, onLearnMore }: ServicesProps) {
                   {/* Buttons */}
                   <div className="flex gap-3">
                     <Button
-                      onClick={() => onBook?.(service.id)}
+                      onClick={() => openBooking(service.id)}
                       className="flex-1 btn-gradient-primary text-white py-3 rounded-md shadow-[0px_8px_20px_-12px_rgba(0,0,0,0.25)] hover:shadow-[0px_10px_25px_-12px_rgba(0,0,0,0.3)] transition-all duration-300"
                     >
                       Book Now

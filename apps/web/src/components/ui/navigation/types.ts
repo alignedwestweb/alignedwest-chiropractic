@@ -20,6 +20,7 @@ export interface NavigationProps {
   currentPage: PageType;
   onNavigate: (page: PageType) => void;
   heroHeight?: number;
+  onBookNow?: () => void;
 }
 
 export interface Socials {

@@ -6,12 +6,15 @@ import type { NavigationProps } from "./types"
 import logowhite from "/logo-contrast.svg"
 import logoprimary from "/logo-primary.svg"
 import { Icon } from "@/components/ui/Icon/Icon"
+import { useBooking } from '@/lib/blocks/BookingProvider'
 
 export function Navigation({ onNavigate, heroHeight = 600 }: NavigationProps) {
   const location = useLocation()
   const isHomePage = location.pathname === "/"
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
+  const { openBooking } = useBooking()
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen((prev) => !prev)
@@ -102,7 +105,7 @@ export function Navigation({ onNavigate, heroHeight = 600 }: NavigationProps) {
                   Sign In
                 </button>
                 <button
-                  onClick={() => onNavigate("book")}
+                  onClick={() => openBooking()}
                   className={cn(
                     "px-4 py-2 rounded-lg transition-all duration-500 font-semibold backdrop-blur-sm shadow-md",
                     isHomePage && !isScrolled

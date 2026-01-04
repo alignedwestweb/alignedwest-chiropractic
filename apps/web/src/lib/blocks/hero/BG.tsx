@@ -1,8 +1,6 @@
 import { BGImage } from "@/components/ui/image"
-import { HERO_BG_WRAPPER_STYLES, bgStyles } from "@/lib/styles"
-import { DEFAULT_BACKGROUND_ALT } from "@/lib/constants"
-import type { BGProps } from "@/lib/types"
-import { cn } from '@/lib/utils';
+import { HERO_BG_WRAPPER_STYLES, bgStyles, DEFAULT_BACKGROUND_ALT, type BGProps } from "@/lib/blocks/hero"
+import { cn } from '@/lib/utils'
 
 export function BackgroundImages({
   fixed = true,
@@ -13,7 +11,7 @@ export function BackgroundImages({
 }: BGProps) {
   const wrapperClass = fixed
     ? HERO_BG_WRAPPER_STYLES.parallax
-    : HERO_BG_WRAPPER_STYLES.fixed;
+    : HERO_BG_WRAPPER_STYLES.fixed
   const imageSM = images?.sm ?? fallback
   const imageMD = images?.md ?? fallback
   const imageLG = images?.lg ?? fallback

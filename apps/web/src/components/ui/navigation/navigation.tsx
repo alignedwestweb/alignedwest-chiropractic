@@ -49,7 +49,7 @@ export function Navigation({ onNavigate, heroHeight = 600 }: NavigationProps) {
             {/* Logo */}
             <Link to="/" onClick={() => { onNavigate('home'); setIsMobileMenuOpen(false) }} className="h-full w-auto p-0 bg-transparent hover:scale-105 transition-transform flex items-center">
               <img
-                src={isHomePage && !isScrolled ? logowhite : logoprimary}
+                src={isHomePage && !isScrolled && !isMobileMenuOpen ? logowhite : logoprimary}
                 alt="Aligned West Chiropractic"
                 className="h-full max-h-15 w-auto"
               />
@@ -122,7 +122,7 @@ export function Navigation({ onNavigate, heroHeight = 600 }: NavigationProps) {
                 onClick={toggleMobileMenu}
                 className={cn(
                   "flex lg:hidden p-2 items-center text-white justify-center rounded-md shadow-md transition-all font-semibold text-sm uppercase",
-                  isHomePage && !isScrolled
+                  isHomePage && !isScrolled && !isMobileMenuOpen
                   ? "bg-white/20 hover:bg-white/30"
                   : "bg-primary hover:bg-primary-dark"
                 )}
@@ -154,23 +154,13 @@ export function Navigation({ onNavigate, heroHeight = 600 }: NavigationProps) {
               <div className="flex items-center gap-4 mt-6">
               <button
                   onClick={() => onNavigate("signin")}
-                  className={cn(
-                    "px-4 py-2 rounded-lg border transition-all duration-500 font-semibold",
-                    isHomePage && !isScrolled
-                      ? "border-white text-white hover:bg-white hover:text-primary"
-                      : "border-primary text-primary hover:bg-primary hover:text-white"
-                  )}
+                  className="px-4 py-2 rounded-lg border transition-all duration-500 font-semibold border-primary text-primary hover:bg-primary hover:text-white"
                 >
                   Sign In
                 </button>
                 <button
                   onClick={() => openBooking()}
-                  className={cn(
-                    "px-4 py-2 rounded-lg transition-all duration-500 font-semibold backdrop-blur-sm shadow-md",
-                    isHomePage && !isScrolled
-                      ? "bg-white/20 text-white hover:bg-white/30"
-                      : "bg-primary text-white hover:bg-primary-dark"
-                  )}
+                  className="px-4 py-2 rounded-lg transition-all duration-500 font-semibold backdrop-blur-sm shadow-md bg-primary text-white hover:bg-primary-dark"
                 >
                   Book Now
                 </button>

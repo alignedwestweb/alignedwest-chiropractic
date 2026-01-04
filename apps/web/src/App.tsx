@@ -1,5 +1,4 @@
 import { useState } from "react"
-
 import { Routes, Route, useNavigate } from "react-router-dom"
 import Home from "@/pages/Home"
 import About from "@/pages/About"
@@ -14,9 +13,7 @@ import { ScrollToTop } from "@/lib/context/ScrollToTop"
 import JotformAgent from "@/lib/blocks/ChatBot"
 
 function App() {
-    const navigate = useNavigate()
-
-
+  const navigate = useNavigate()
   const [currentPage, setCurrentPage] = useState<PageType>('home')
   const handleNavigate = (page: PageType) => {
     setCurrentPage(page)
@@ -45,29 +42,25 @@ function App() {
     }
   }
 
-
   return (
     <>
-    <ScrollToTop />
+      <ScrollToTop />
       <Navigation currentPage={currentPage} onNavigate={handleNavigate} />
       <Routes>
         <Route path="/" element={<Home onNavigate={handleNavigate} />} />
         <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services 
-        onLearnMore={(slug) => {
-                // IMPORTANT: use React Router navigation, not pushState
-                navigate(`/resources?article=${encodeURIComponent(slug)}`)
-              }}
-              />} />
+        <Route path="/services" element={<Services
+          onLearnMore={(slug) => {
+            navigate(`/resources?article=${encodeURIComponent(slug)}`)
+          }}
+        />} />
         <Route path="/resources" element={<Resources />} />
         <Route path="/clinic" element={<ClinicInfo />} />
-
       </Routes>
       <JotformAgent />
       <Footer onNavigate={handleNavigate} />
     </>
   )
 }
-
 
 export { App }

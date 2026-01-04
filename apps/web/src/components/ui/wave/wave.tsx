@@ -9,14 +9,11 @@ import './gradient.css'
 import { NOISE_SETTINGS, RIPPLE_SETTINGS, SAND_SETTINGS, COLORS } from "./constants"
 import type { Point } from "./types"
 
-export default function HeroBG() {
+const WaveAnimation = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const sandTexCanvas = useRef<HTMLCanvasElement>(document.createElement("canvas"))
   const sandTexCtx = useRef<CanvasRenderingContext2D | null>(null)
 
-  // ----------------------------------------
-  // INJECT GRADIENT KEYFRAMES
-  // ----------------------------------------
   useEffect(() => {
     const styleEl = document.createElement("style")
     styleEl.innerHTML = gradientKeyframes
@@ -26,9 +23,6 @@ export default function HeroBG() {
     }
   }, [])
 
-  // ----------------------------------------
-  // NOISE / GRAIN UTILS
-  // ----------------------------------------
   const smoothNoise = (width: number, height: number) => {
     const arr = new Float32Array(width * height)
     for (let y = 0; y < height; y++) {
@@ -56,9 +50,6 @@ export default function HeroBG() {
     ctx.putImageData(img, 0, 0)
   }
 
-  // ----------------------------------------
-  // CREATE SAND TEXTURE
-  // ----------------------------------------
   const createSandTexture = (width: number, height: number) => {
     sandTexCanvas.current.width = width * 2
     sandTexCanvas.current.height = height * 2
@@ -101,9 +92,6 @@ export default function HeroBG() {
     addSandGrain(ctx, sandTexCanvas.current.width, sandTexCanvas.current.height)
   }
 
-  // ----------------------------------------
-  // DRAW INDIVIDUAL RIPPLE
-  // ----------------------------------------
   const drawSandRipple = (ctx: CanvasRenderingContext2D, cx: number, cy: number, r: number, t: number, i: number) => {
     const points: Point[] = []
     for (let a = 0; a < Math.PI * 2; a += RIPPLE_SETTINGS.rippleDetail) {
@@ -140,9 +128,6 @@ export default function HeroBG() {
     ctx.stroke()
   }
 
-  // ----------------------------------------
-  // DRAW RIPPLE LOOP
-  // ----------------------------------------
   const drawRipples = (ctx: CanvasRenderingContext2D, time: number) => {
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height)
 
@@ -174,9 +159,6 @@ export default function HeroBG() {
     }
   }
 
-  // ----------------------------------------
-  // ANIMATE + RESIZE
-  // ----------------------------------------
   useEffect(() => {
     const canvas = canvasRef.current
     if (!canvas) return
@@ -205,21 +187,20 @@ export default function HeroBG() {
     }
   }, [])
 
-  // ----------------------------------------
-  // RENDER
-  // ----------------------------------------
   return (
     <section className={heroBGWrapper}>
-      <div className="absolute inset-0 w-full h-full">
+      <div className="absolute inset-0 size-full">
         <div className={`${canvasContainer} absolute inset-0`}>
           <div
             style={getGradientInlineStyle()}
             className="gradient absolute inset-0 z-1 pointer-events-none"
           />
-          <canvas ref={canvasRef} className="absolute z-0 inset-0 w-full h-full" />
+          <canvas ref={canvasRef} className="absolute z-0 inset-0 size-full" />
         </div>
 
       </div>
     </section>
   )
 }
+
+export { WaveAnimation }

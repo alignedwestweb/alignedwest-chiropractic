@@ -1,0 +1,6 @@
+export { Hero } from "./Hero"
+export { HeroContent } from "./HeroContent"
+export { type OverlayVariant, type HeroVariant, type HeroHeight, type HeroAlignment, type HeroLayout, DEFAULT_BACKGROUND_ALT } from "@/lib/blocks/hero/constants"
+export { heroVariants, HERO_BG_WRAPPER_STYLES, HERO_CONTENT_STYLES, OVERLAY_STYLES, HERO_ALIGNMENT_STYLES, HERO_LAYOUT_STYLES, GALLERY_GRID_CLASSES, bgStyles } from "@/lib/blocks/hero/styles"
+export type { HeroProps, HeroContentProps, HeroButton, GalleryProps, BGProps } from "@/lib/blocks/hero/types"
+export { BackgroundImages } from "@/lib/blocks/hero/BG"

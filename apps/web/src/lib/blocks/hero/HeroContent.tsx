@@ -2,12 +2,8 @@
 
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
-import type { HeroContent } from '@/lib/types'
+import type { HeroContentProps } from '@/lib/blocks/hero'
 import type { PageType } from '@/components/ui/navigation/types'
-
-interface HeroContentProps extends HeroContent {
-  onBookNow?: () => void;
-}
 
 export function HeroContent({
   title,

@@ -13,7 +13,7 @@ import massageSessionImg from '/assets/images/imgServicesAlign.webp'
 export default function MassageApprenticeship() {
     const [applicationOpen, setApplicationOpen] = useState(false)
     const src = "https://form.jotform.com/253270906369059"
-    
+
     return (
         <div className="min-h-screen bg-white">
             {/* Hero Section */}
@@ -33,7 +33,7 @@ export default function MassageApprenticeship() {
                     <div className="text-center w-full mb-12 bg-white shadow-lg border border-primary p-8 rounded-2xl">
                         <div className="inline-flex items-center gap-2 bg-sunset-100 text-sm px-6 py-3 rounded-full mb-6">
                             <Calendar className="h-4 w-4 text-sunset-600" />
-                            <h2 className="font-medium text-stone-900">Application Deadline <span className="font-semibold text-rose-600">December 30th, 2025</span></h2>
+                            <h2 className="font-medium text-stone-900">Application Deadline <span className="font-semibold text-rose-600">February 2, 2026</span></h2>
                         </div>
                         <p className="text-stone-700 max-w-4xl mx-auto mb-6">
                             Thank you for your interest in the Massage Therapy Apprenticeship offered through AlignedWest Chiropractic.<br />

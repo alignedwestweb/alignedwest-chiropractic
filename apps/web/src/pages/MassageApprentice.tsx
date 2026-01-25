@@ -5,50 +5,15 @@ import { Image } from '@/components/ui/image'
 import { Card } from '@/components/ui/card'
 import { Check, Calendar, BookOpen, Award, Users, Clock, FileText, GraduationCap, Heart, Target } from 'lucide-react'
 import { useState } from 'react'
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
-import { Label } from '@/components/ui/label'
-import { toast } from 'sonner'
+import { Dialog, DialogContent } from '@/components/ui/dialog'
 import massageHeroImg from '/assets/images/imgServicesAlign.webp'
 import towelsImg from '/assets/images/imgServicesAlign.webp'
 import massageSessionImg from '/assets/images/imgServicesAlign.webp'
 
 export default function MassageApprenticeship() {
     const [applicationOpen, setApplicationOpen] = useState(false)
-    const [formData, setFormData] = useState({
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        education: '',
-        experience: '',
-        motivation: ''
-    })
-
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault()
-        // In a real application, this would submit to Supabase
-        toast.success('Application submitted successfully! We\'ll contact you within 3-5 business days.')
-        setApplicationOpen(false)
-        setFormData({
-            firstName: '',
-            lastName: '',
-            email: '',
-            phone: '',
-            education: '',
-            experience: '',
-            motivation: ''
-        })
-    }
-
-    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value
-        })
-    }
-
+    const src = "https://form.jotform.com/253270906369059"
+    
     return (
         <div className="min-h-screen bg-white">
             {/* Hero Section */}
@@ -423,109 +388,19 @@ export default function MassageApprenticeship() {
 
             {/* Application Dialog */}
             <Dialog open={applicationOpen} onOpenChange={setApplicationOpen}>
-                <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
-                    <DialogHeader>
-                        <DialogTitle>Massage Apprenticeship Application</DialogTitle>
-                        <DialogDescription>
-                            Please fill out the form below to apply for the Massage Therapy Apprenticeship program.
-                            We'll review your application and contact you within 3-5 business days.
-                        </DialogDescription>
-                    </DialogHeader>
-                    <form onSubmit={handleSubmit} className="space-y-6">
-                        <div className="grid grid-cols-2 gap-4">
-                            <div className="space-y-2">
-                                <Label htmlFor="firstName">First Name *</Label>
-                                <Input
-                                    id="firstName"
-                                    name="firstName"
-                                    value={formData.firstName}
-                                    onChange={handleInputChange}
-                                    required
-                                />
-                            </div>
-                            <div className="space-y-2">
-                                <Label htmlFor="lastName">Last Name *</Label>
-                                <Input
-                                    id="lastName"
-                                    name="lastName"
-                                    value={formData.lastName}
-                                    onChange={handleInputChange}
-                                    required
-                                />
-                            </div>
-                        </div>
+                <DialogContent className="p-0 max-w-none w-[calc(100vw-2rem)] h-[calc(100vh-2rem)] overflow-hidden">
+    
 
-                        <div className="space-y-2">
-                            <Label htmlFor="email">Email *</Label>
-                            <Input
-                                id="email"
-                                name="email"
-                                type="email"
-                                value={formData.email}
-                                onChange={handleInputChange}
-                                required
-                            />
-                        </div>
-
-                        <div className="space-y-2">
-                            <Label htmlFor="phone">Phone Number *</Label>
-                            <Input
-                                id="phone"
-                                name="phone"
-                                type="tel"
-                                value={formData.phone}
-                                onChange={handleInputChange}
-                                required
-                            />
-                        </div>
-
-                        <div className="space-y-2">
-                            <Label htmlFor="education">Educational Background</Label>
-                            <Textarea
-                                id="education"
-                                name="education"
-                                value={formData.education}
-                                onChange={handleInputChange}
-                                placeholder="Please describe your educational background..."
-                                rows={3}
-                            />
-                        </div>
-
-                        <div className="space-y-2">
-                            <Label htmlFor="experience">Relevant Experience</Label>
-                            <Textarea
-                                id="experience"
-                                name="experience"
-                                value={formData.experience}
-                                onChange={handleInputChange}
-                                placeholder="Do you have any experience in massage therapy, healthcare, or related fields?"
-                                rows={3}
-                            />
-                        </div>
-
-                        <div className="space-y-2">
-                            <Label htmlFor="motivation">Why are you interested in this program? *</Label>
-                            <Textarea
-                                id="motivation"
-                                name="motivation"
-                                value={formData.motivation}
-                                onChange={handleInputChange}
-                                placeholder="Tell us about your motivation and goals..."
-                                rows={4}
-                                required
-                            />
-                        </div>
-
-                        <div className="flex gap-3 justify-end">
-                            <Button type="button" variant="outlined" onClick={() => setApplicationOpen(false)}>
-                                Cancel
-                            </Button>
-                            <Button type="submit" className="bg-primary hover:bg-primary/90">
-                                Submit Application
-                            </Button>
-                        </div>
-                    </form>
-                </DialogContent>
+        <div className="px-3 pt-12 pb-3 h-full">
+          <iframe
+            key={src} // IMPORTANT: forces reload when src changes
+            title="Booking"
+            src={src}
+            className="w-full h-full border-0 rounded-md"
+            allow="geolocation; microphone; camera; fullscreen; payment"
+          />
+        </div>
+      </DialogContent>
             </Dialog>
         </div>
     )
